@@ -1,0 +1,81 @@
+#app {
+    height: 100%;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  .ourcourses{
+    text-align: center;
+    padding: 10vh 0 0 0;
+    color: #5090cc;
+  }
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 1rem;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    overflow-y: hidden;
+  overflow-x: hidden;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card{
+    width: 100vw;
+  }
+  .slide-content{
+    width: 30vw;
+  }
+  
+  .swiper {
+    width: 100vw;
+    height: 70vh;
+    margin: 15vh auto;
+  }
+  .append-buttons {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .append-buttons button {
+    display: flex;
+    cursor: pointer;
+    border: 1px solid #5090cc;
+    color: #5090cc;
+    text-decoration: none;
+    padding: 2rem 5rem;
+    border-radius: 1rem;
+    margin: 0 10px;
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 768px){
+    .slide-content{
+      width: 70vw;
+    }
+  }

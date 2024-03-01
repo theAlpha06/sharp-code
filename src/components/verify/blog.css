@@ -1,0 +1,24 @@
+.verify{
+  text-align: center;
+}
+.veri{
+  margin: 10vh;
+}
+.veri input{
+  margin: 2vh;
+  padding: 1.2vh;
+  border-radius: 5%;
+}
+.veri label{
+  margin: 2vh;
+}
+.veri button{
+  margin: 2vh;
+  padding: 1.4vh;
+  width: 8vw;
+  color: #fff;
+  background-color:black;
+}
+.veri button:hover{
+  background-color: #5090cc;
+}

@@ -1,0 +1,125 @@
+.aboutHome {
+  margin-top: 30vh;
+}
+.aboutHome #heading {
+  text-align: left;
+  padding: 0;
+}
+.aboutHome .left img {
+  width: 40vw;
+  height: 100vh;
+  padding-top: 20vh;
+
+  /* object-fit: cover; */
+}
+.aboutHome .right {
+  padding: 5vh 5vw;
+}
+.aboutHome .items {
+  margin-top: 5vh;
+}
+.aboutHome .item {
+  background-color: #fff;
+  margin-top: 1rem;
+  padding: 1rem;
+  transition: 0.5s;
+}
+.aboutHome .img {
+  width: 18vw;
+}
+.aboutHome img {
+  width: 5vw;
+  height: 10vh;
+}
+.aboutHome .item h2 {
+  font-size: 2rem;
+}
+.aboutHome .item p {
+  color: #999999;
+  font-size: 0.9rem;
+}
+.aboutHome .item:hover {
+  background-color: #5090cc;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+}
+.aboutHome .item:hover p {
+  color: #fff;
+}
+/*----------awrapper------------*/
+.awrapper {
+  background-image: url("../../../public/images/awrapper.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  color: #fff;
+}
+.awrapper .box {
+  padding: 8vh 0;
+}
+.awrapper img {
+  margin-right: 1vw;
+}
+.awrapper h1 {
+  font-size: 50px;
+}
+.awrapper h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+/*----------awrapper------------*/
+@media screen and (max-width: 768px) {
+  .aboutHome .container {
+    flex-direction: column-reverse;
+  }
+  .aboutHome .row {
+    width: 100%;
+  }
+  .aboutHome .left img{
+    margin-left: 20vw;
+  }
+  
+  .awrapper {
+    height: 50vh;
+  }
+  .awrapper img {
+    height: 4rem;
+    margin-right: 1vw;
+  }
+  .aboutHome .right {
+    padding-top:0vh;
+  }
+}
+@media screen and (max-width: 1200px){
+  .aboutHome .img {
+    width: 25vw;
+  }
+  .aboutHome .items {
+    margin-top: 1vh;
+  }
+  .aboutHome .right {
+    padding-top: 15vh;
+  }
+}
+@media screen and (max-width: 1000px){
+  .aboutHome .img {
+    width: 25vw;
+  }
+  .aboutHome .items {
+    margin-top: 1vh;
+  }
+  .awrapper h1{
+    font-size: 25px;
+  }
+  .awrapper img {
+    height: 4rem;
+    margin-right: 1vw;
+  }
+  .aboutHome .right {
+    padding-top: 30vh;
+  }
+}
+
+
