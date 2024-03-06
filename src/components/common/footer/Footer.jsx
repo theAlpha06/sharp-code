@@ -4,14 +4,14 @@ import "./footer.css"
 
 const Footer = () => {
   return (
-    <>
+    <div className="footer__container">
       <section className='newletter'>
-        <div className='container flexSB'>
-          <div className='left row'>
+        <div className='news_container flexSB'>
+          <div className='newsletter_left '>
             <h1>Newsletter - Stay tune and get the latest update</h1>
             <span>Far far away, behind the word mountains</span>
           </div>
-          <div className='right row'>
+          <div className='newsletter_right'>
             <input type='text' placeholder='Enter email address' />
             <i className='fa fa-paper-plane'></i>
           </div>
@@ -28,8 +28,10 @@ const Footer = () => {
             <i className='fab fa-twitter icon'></i>
             <i className='fab fa-instagram icon'></i>
           </div>
+
           <div className='box link'>
             <h3>Explore</h3>
+            <hr />
             <ul>
               <li>About Us</li>
               <li>Services</li>
@@ -40,6 +42,7 @@ const Footer = () => {
           </div>
           <div className='box link'>
             <h3>Quick Links</h3>
+            <hr />
             <ul>
               <li>Contact Us</li>
               <li>Pricing</li>
@@ -69,7 +72,7 @@ const Footer = () => {
               </div>
             ))}
           </div> */}
-          <div className='box last'>
+          {/* <div className='box last'>
             <h3>Have a Questions?</h3>
             <ul>
               <li>
@@ -85,7 +88,7 @@ const Footer = () => {
                 info@yourdomain.com
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </footer>
       <div className='legal'>
@@ -93,7 +96,7 @@ const Footer = () => {
           Copyright ©2022 All rights reserved | This template is made with <i className='fa fa-heart'></i> by GorkhCoder
         </p>
       </div>
-    </>
+    </div>
   )
 }
 
