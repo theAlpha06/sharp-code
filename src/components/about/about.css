@@ -1,5 +1,5 @@
 .aboutHome {
-  margin-top: 30vh;
+  margin-top: 0vh;
 }
 .aboutHome #heading {
   text-align: left;
@@ -13,8 +13,10 @@
   /* object-fit: cover; */
 }
 .aboutHome .right {
-  padding: 5vh 5vw;
+  padding: 1rem;
+  padding-bottom: 4rem;
 }
+
 .aboutHome .items {
   margin-top: 5vh;
 }
@@ -54,7 +56,12 @@
   background-size: cover;
   background-position: center;
   height: 30vh;
+  height: auto;
   color: #fff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* overflow-x: hidden; */
 }
 .awrapper .box {
   padding: 8vh 0;
@@ -89,7 +96,19 @@
     margin-right: 1vw;
   }
   .aboutHome .right {
-    padding-top:0vh;
+    padding-top:0rem;
+  }
+
+  .item_img{
+    width: 80px;
+    padding: 0rem 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .item_img>img{
+    width: 100%;
   }
 }
 @media screen and (max-width: 1200px){
@@ -118,8 +137,12 @@
     margin-right: 1vw;
   }
   .aboutHome .right {
-    padding-top: 30vh;
+    padding-top: 40vh;
   }
+  .left{
+    display: none;
+  }
+ 
 }
 
 

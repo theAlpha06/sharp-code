@@ -15,7 +15,9 @@
 header {
   background-color: rgba(255, 255, 255, 0.2);
   margin: 0;
+  z-index: 10;
 }
+
 header .nav {
   display: flex !important;
 }
@@ -34,11 +36,16 @@ header ul li a:hover {
   color: #fff;
 }
 .start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: black;
   font-weight: 600;
   padding: 30px 70px;
+  padding: 1rem;
   color: #fff;
   clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+  /* width: fit-content; */
 }
 .toggle {
   display: none;
@@ -51,6 +58,7 @@ header ul li a:hover {
   header {
     background-color:#5090cc,transparent ;
     position: relative;
+    /* height: 1rem; */
   }
   header ul.flexSB {
     display: none;
@@ -65,17 +73,22 @@ header ul li a:hover {
     font-size: 30px;
     position: absolute;
     right: 0;
+    bottom: 0;
     top: -20px;
   }
   .mobile-nav {
     position: absolute;
-    top: 7vh;
+    top: 8.5vh;
     left: 0;
     width: 100%;
     background-color: #5090cc;
+    transition: 0.3s ease
   }
   .start{
     clip-path: polygon(0% 0%, 88% 0, 100% 100%, 0% 100%);
+  }
+  .social{
+    display: none;
   }
   
 }
@@ -85,3 +98,4 @@ header ul li a:hover {
     /* font-weight: 900; */
   }
 }
+
