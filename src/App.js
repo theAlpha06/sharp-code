@@ -10,9 +10,10 @@ import Contact from "./components/contact/Contact"
 import Footer from "./components/common/footer/Footer"
 import Home from "./components/home/Home"
 import Verify from "./components/verify/Blog"
+
 function App() {
   return (
-    <>
+    <div className="router__container">
       <Router>
         <Header />
         <Switch>
@@ -23,12 +24,13 @@ function App() {
           <Route exact path='/team' component={Team} />
           <Route exact path='/pricing' component={Pricing} />
           {/* <Route exact path='/journal' component={Blog} /> */}
+          
           <Route exact path='/journal' component={Verify} />
           <Route exact path='/contact' component={Contact} />
         </Switch>
         <Footer />
       </Router>
-    </>
+    </div>
   )
 }
 
