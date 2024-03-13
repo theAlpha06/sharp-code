@@ -19,7 +19,7 @@ body {
 .flexSB {
   display: flex;
   justify-content: space-between;
-  
+  z-index: 100;
 }
 .icon {
   width: 40px;
@@ -189,3 +189,4 @@ p {
   }
   
 }
+
