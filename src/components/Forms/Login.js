@@ -1,52 +1,60 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux"
+import {useNavigate } from 'react-router-dom'
+import { login } from "../../Services/Operations/apiAuth"
 import "./Forms.css";
 
 export default function Login() {
-    const [state, setState] = useState({
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [formData, setFormData] = useState({
         email: "",
-        password: ""
-    });
+        password: "",
+    })
 
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setState((prevProps) => ({
-            ...prevProps,
-            [name]: value
-        }));
-    };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(state);
-    };
+    const { email, password } = formData
+
+    const handleOnChange = (e) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            [e.target.name]: e.target.value,
+        }))
+    }
+
+    const handleOnSubmit = (e) => {
+        e.preventDefault()
+        dispatch(login(email, password, navigate))
+    }
 
     return (
         <div className="login__container">
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit} className="form__box">
+            <h1 className="title"> Login</h1>
+            <form onSubmit={handleOnSubmit} className="form__box">
                 <div className="form-control">
-                    
+
                     <input
                         type="text"
                         name="email"
                         placeholder="Email"
-                        value={state.email}
-                        onChange={handleInputChange}
+                        value={email}
+                        onChange={handleOnChange}
                     />
                 </div>
                 <div className="form-control">
-                    
+
                     <input
                         type="password"
                         name="password"
                         placeholder="Password"
-                        value={state.password}
-                        onChange={handleInputChange}
+                        value={password}
+                        onChange={handleOnChange}
                     />
                 </div>
                 <div className="form-control ">
                     <label></label>
-                    <button type="submit" className="primary-btn">Login</button>
+                    <button type="submit" className="primary-btn btn">Login</button>
                 </div>
             </form>
         </div>

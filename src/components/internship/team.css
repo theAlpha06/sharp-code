@@ -8,6 +8,20 @@
   width: 100%;
   height: 100%;
 }
+
+.items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.btn:hover{
+  background-color: white;
+  color: #000;
+  border-color:#000 ;
+}
 .overlay {
   position: absolute;
   bottom: 0;
