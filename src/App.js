@@ -8,10 +8,11 @@ import Pricing from "./components/pricing/Pricing"
 import Contact from "./components/contact/Contact"
 import Footer from "./components/common/footer/Footer"
 import Home from "./components/home/Home"
-import Verify from "./components/verify/Blog"
+// import Verify from "./components/verify/Blog"
 import { Toaster } from 'react-hot-toast';
 import SignUp from "./components/Forms/SignUp"
 import Login from "./components/Forms/Login"
+import Profile from "./components/Profile/Profile"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register' element={<SignUp />} />
           <Route exact path='/contact' element={<Contact />} />
+          <Route path="/user/profile" element={<Profile />} />
         </Routes>
         <Footer />
       </Router>

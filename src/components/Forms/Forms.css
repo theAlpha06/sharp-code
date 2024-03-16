@@ -45,3 +45,8 @@ input{
 
 }
 
+@media screen and (max-width: 768px){
+    .login__container{
+        width: 90%;
+    }
+}

@@ -50,18 +50,18 @@ button {
   padding: 17px 30px;
   background-color: #fff;
   color: black;
-  font-weight: 5600;
+  font-weight: 600;
   font-size: 0.8rem;
   border: none;
   margin: 10px 10px 0 0;
-  border-radius: 3px;
+  border-radius: 0.5rem;
   cursor: pointer;
   box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
   transition: 0.5s;
   z-index: 10;
 }
 button i {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 button:hover {
   box-shadow: none;
@@ -71,6 +71,8 @@ button:hover {
   background-color: black;
   color: #fff;
   cursor: pointer;
+  
+  font-weight: 600;
 }
 
 .primary-btn:hover{
