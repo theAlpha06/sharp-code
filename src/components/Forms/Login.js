@@ -40,6 +40,7 @@ export default function Login() {
                         placeholder="Email"
                         value={email}
                         onChange={handleOnChange}
+                        required
                     />
                 </div>
                 <div className="form-control">
@@ -50,6 +51,7 @@ export default function Login() {
                         placeholder="Password"
                         value={password}
                         onChange={handleOnChange}
+                        required
                     />
                 </div>
                 <div className="form-control ">

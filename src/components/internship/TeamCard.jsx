@@ -7,16 +7,20 @@ const TeamCard = () => {
   return (
     <>
       {team.map((val) => (
-        <div className='items shadow'>
-          <div className='img'>
+        
+        <div className="flip-box">
+        <div className='items shadow flip-box-inner'>
+          <div className='img flip-box-front'>
             <img src={val.cover} alt='' />
 
           </div>
-          <div className='details'>
+          <div className='details flip-box-back'>
             <h2>{val.name}</h2>
             <p>{val.work}</p>
+            <Link to="/register"> <button className="btn"  >Apply</button></Link>
           </div>
-          <Link to="/register"> <button className="btn"  >Apply</button></Link>
+          
+        </div>
         </div>
       ))}
     </>

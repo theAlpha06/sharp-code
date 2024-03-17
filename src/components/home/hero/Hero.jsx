@@ -1,9 +1,9 @@
 import React from "react"
-// import Heading from "../../common/heading/Heading"
 import "./Hero.css"
-// import AboutCard from "../../about/AboutCard"
+
 
 const Hero = () => {
+ 
   return (
     <>
       <section className='hero'>
@@ -18,7 +18,7 @@ const Hero = () => {
               <button className="primary-btn " >
                 GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
               </button>
-              <button className="">
+              <button className="" >
                 VIEW COURSE <i className='fa fa-long-arrow-alt-right'></i>
               </button>
             </div>

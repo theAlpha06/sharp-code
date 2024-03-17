@@ -11,9 +11,10 @@
     position: relative;
     background-color: white;
     margin: 2rem auto;
-    box-shadow: -5px -5px 10px rgb(192, 182, 182);
+    box-shadow: 0 -5px 10px rgb(192, 182, 182);
     
 }
+
 .form__box{
     width: 100%;
     padding: 1rem;
@@ -38,6 +39,9 @@ input{
     border: none;
     border-bottom: 2px solid #5090cc;
     background-color: transparent;
+}
+textarea:focus, input:focus{
+    outline: none;
 }
 .title{
     color: #5090cc;

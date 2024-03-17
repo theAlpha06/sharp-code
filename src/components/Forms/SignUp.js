@@ -80,6 +80,7 @@ export default function SignUp() {
             placeholder="First Name"
             value={firstName}
             onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -91,6 +92,7 @@ export default function SignUp() {
             placeholder="Last name"
             value={lastName}
             onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -102,6 +104,7 @@ export default function SignUp() {
             placeholder="Email"
             value={email}
             onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -114,6 +117,7 @@ export default function SignUp() {
             placeholder="Password"
             value={password}
             onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -125,6 +129,7 @@ export default function SignUp() {
             placeholder="Confirm Password"
             value={confirmPassword}
             onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -136,6 +141,7 @@ export default function SignUp() {
             placeholder="Domain of Internship"
             value={domain}
             onChange={handleOnChange}
+            required
           />
         </div>
 
