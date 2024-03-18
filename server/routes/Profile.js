@@ -7,7 +7,7 @@ const {updateProfile} = require("../controllers/Profile");
 const {auth}=require("../middlewares/auth")
 
 
-router.put("/updateProfile",auth, updateProfile)
+router.post("/updateProfile",auth, updateProfile)
 
 
 module.exports = router

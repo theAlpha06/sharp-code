@@ -28,8 +28,11 @@ const Header = () => {
               <Link to='/contact'>Contact</Link>
             </li>
             <li>
-              <Link to='/journal'>Verify</Link>
+              <Link to='/login'>Login</Link>
             </li>
+            <li>
+              <Link to='/register'>Apply</Link>
+            </li>  
           </ul>
           <div className='start' >
             <div className=''>GET INTERNSHIP</div>
