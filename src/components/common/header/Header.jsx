@@ -28,11 +28,16 @@ const Header = () => {
               <Link to='/contact'>Contact</Link>
             </li>
             <li>
-              <Link to='/journal'>Verify</Link>
+              <Link to='/login'>Login</Link>
             </li>
             <li>
+<<<<<<< HEAD
               <Link to='/signinup'>Login/Signup</Link>
             </li>
+=======
+              <Link to='/register'>Apply</Link>
+            </li>  
+>>>>>>> e0e023ae42acd3452aa593660636154f917271e2
           </ul>
           <div className='start' >
             <div className=''>GET INTERNSHIP</div>

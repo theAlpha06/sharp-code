@@ -1,80 +1,86 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux"
+import { toast } from "react-hot-toast"
+import { useNavigate } from "react-router-dom"
+// import { setSignupData } from "../../slices/authSlice";
+import { signUp } from "../../Services/Operations/apiAuth"
 
 import "./Forms.css";
 
 export default function SignUp() {
-  const [state, setState] = useState({
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
     confirmPassword: "",
     domain: "",
+   
+  })
 
-  });
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setState((prevProps) => ({
-      ...prevProps,
-      [name]: value
-    }));
-  };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(state);
+  const { firstName, lastName, email, password, confirmPassword, domain } = formData
 
-  };
+  // Handle input fields, when some value changes
+  const handleOnChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }))
+  }
 
-  const postData = async (e) => {
-    e.preventDefault();
-    const {
-      firstName,
+  // Handle Form Submission
+  const handleOnSubmit = (e) => {
+    e.preventDefault()
+
+    if (password !== confirmPassword) {
+      toast.error("Passwords Do Not Match")
+      return
+    }
+    // const signupData = {
+    //   ...formData,
+    // }
+
+    // dispatch(setSignupData(signupData))
+    dispatch(signUp(firstName,
       lastName,
       email,
       password,
       confirmPassword,
-      domain } = state;
+      domain,
+      navigate
+      ))
 
-    const res = await fetch("/api/v2/auth/signup", {
-      method: "POST",
-      header: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        password,
-        confirmPassword,
-        domain
-      })
-    });
 
-    const data=await res.json();
-    if (data.status===400 || !data)
-    {
-      window.alert("Invalid Registration")
-    }
-    else{
-      window.alert(" Registration successful");
-     
-    }
+    // Reset
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      domain: "",
+    })
+
   }
 
   return (
     <div className="login__container">
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit} method="POST" className="form__box">
+      <h1 className="title">Register</h1>
+      <form onSubmit={handleOnSubmit} method="POST" className="form__box">
         <div className="form-control">
 
           <input
             type="text"
             name="firstName"
             placeholder="First Name"
-            value={state.firstName}
-            onChange={handleInputChange}
+            value={firstName}
+            onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -84,8 +90,9 @@ export default function SignUp() {
             type="text"
             name="lastName"
             placeholder="Last name"
-            value={state.lastName}
-            onChange={handleInputChange}
+            value={lastName}
+            onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -95,8 +102,9 @@ export default function SignUp() {
             type="text"
             name="email"
             placeholder="Email"
-            value={state.email}
-            onChange={handleInputChange}
+            value={email}
+            onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -107,8 +115,9 @@ export default function SignUp() {
             type="password"
             name="password"
             placeholder="Password"
-            value={state.password}
-            onChange={handleInputChange}
+            value={password}
+            onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -118,8 +127,9 @@ export default function SignUp() {
             type="password"
             name="confirmPassword"
             placeholder="Confirm Password"
-            value={state.confirmPassword}
-            onChange={handleInputChange}
+            value={confirmPassword}
+            onChange={handleOnChange}
+            required
           />
         </div>
 
@@ -129,15 +139,16 @@ export default function SignUp() {
             type="text"
             name="domain"
             placeholder="Domain of Internship"
-            value={state.domain}
-            onChange={handleInputChange}
+            value={domain}
+            onChange={handleOnChange}
+            required
           />
         </div>
 
 
         <div className="form-control ">
           <label></label>
-          <button type="submit" className="primary-btn" onClick={postData}>Register</button>
+          <button type="submit" className="primary-btn btn" >Register</button>
         </div>
       </form>
     </div>

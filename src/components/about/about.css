@@ -29,6 +29,9 @@
   padding: 1rem;
   transition: 0.5s;
 }
+.item{
+  box-shadow: -5px -5px 10px rgba(173, 168, 168, 0.568);
+}
 .aboutHome .img {
   width: 18vw;
 }

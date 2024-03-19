@@ -1,33 +1,67 @@
 import React, { useState } from "react";
 import "./Forms.css";
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+
+import { profile } from "../../Services/Operations/profile";
 
 export default function Profile() {
-    const [state, setState] = useState({
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const { token } = useSelector((state) => state.auth)
+
+    const [formData, setFormData] = useState({
         gender: "",
         collage: "",
         collageLocation: "",
-        branch: "",
         mobile: "",
-    });
+        branch: "",
+        navigate
+    })
 
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setState((prevProps) => ({
-            ...prevProps,
-            [name]: value
-        }));
-    };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(state);
 
-    };
+    const { gender, collage, collageLocation, mobile, branch } = formData
+
+    // Handle input fields, when some value changes
+    const handleOnChange = (e) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            [e.target.name]: e.target.value,
+        }))
+    }
+
+    // Handle Form Submission
+    const handleOnSubmit = (e) => {
+
+        dispatch(profile(token,
+            {
+                gender,
+                collage,
+                collageLocation,
+                mobile,
+                branch,
+                navigate
+            }
+        ))
+
+
+        // Reset
+        // setFormData({
+        //   firstName: "",
+        //   lastName: "",
+        //   email: "",
+        //   password: "",
+        //   confirmPassword: "",
+        //   domain: "",
+        // })
+
+    }
 
     return (
         <div className="login__container">
             <h1>Complete Your Profile</h1>
-            <form onSubmit={handleSubmit} className="form__box">
+            <form onSubmit={handleOnSubmit} className="form__box">
 
                 <div className="form-control">
 
@@ -35,8 +69,8 @@ export default function Profile() {
                         type="text"
                         name="gender"
                         placeholder="Gender"
-                        value={state.gender}
-                        onChange={handleInputChange}
+                        value={gender}
+                        onChange={handleOnChange}
                     />
                 </div>
                 <div className="form-control">
@@ -45,8 +79,8 @@ export default function Profile() {
                         type="text"
                         name="collage"
                         placeholder="Collage Name"
-                        value={state.collage}
-                        onChange={handleInputChange}
+                        value={collage}
+                        onChange={handleOnChange}
                     />
                 </div>
 
@@ -56,8 +90,8 @@ export default function Profile() {
                         type="text"
                         name="collageLocation"
                         placeholder="Location of Collage"
-                        value={state.collageLocation}
-                        onChange={handleInputChange}
+                        value={collageLocation}
+                        onChange={handleOnChange}
                     />
                 </div>
 
@@ -67,8 +101,8 @@ export default function Profile() {
                         type="text"
                         name="branch"
                         placeholder="Branch"
-                        value={state.branch}
-                        onChange={handleInputChange}
+                        value={branch}
+                        onChange={handleOnChange}
                     />
                 </div>
 
@@ -79,8 +113,8 @@ export default function Profile() {
                         type="number"
                         name="mobile"
                         placeholder="Mobile Number"
-                        value={state.mobile}
-                        onChange={handleInputChange}
+                        value={mobile}
+                        onChange={handleOnChange}
                     />
                 </div>
 

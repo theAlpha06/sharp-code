@@ -1,9 +1,9 @@
 import React from 'react'
 import './slider.css'
 import img1 from "./thumbnail4.jfif";
-import img2 from "./thumbnail2.jpg";
+
 import img3 from "./thumbnail3.jfif";
-import img4 from "./thumbnail4.jfif";
+
 import img5 from "./thumbnail5.jfif";
 import img6 from './thumbnail6.jpg'
 

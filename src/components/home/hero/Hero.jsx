@@ -1,9 +1,9 @@
 import React from "react"
-// import Heading from "../../common/heading/Heading"
 import "./Hero.css"
-// import AboutCard from "../../about/AboutCard"
+
 
 const Hero = () => {
+ 
   return (
     <>
       <section className='hero'>
@@ -15,10 +15,10 @@ const Hero = () => {
               Help you reach your Goals and Unleash your full otential then
               come and be our Intern</p>
             <div className='button '>
-              <button className="primary-btn btn1" >
+              <button className="primary-btn " >
                 GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
               </button>
-              <button className="btn2">
+              <button className="" >
                 VIEW COURSE <i className='fa fa-long-arrow-alt-right'></i>
               </button>
             </div>
