@@ -27,6 +27,9 @@ header li {
 header ul {
   padding-top: 1.8rem;
 }
+.home{
+  padding-top: 2.6vh;
+}
 header ul li a {
   color: black;
   font-weight: 500;
@@ -49,6 +52,9 @@ header ul li a:hover {
 }
 .toggle {
   display: none;
+}
+.social{
+  padding-top: 3vh;
 }
 /*--------header------------*/
 @media screen and (max-width: 768px) {

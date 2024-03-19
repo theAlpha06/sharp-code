@@ -2,7 +2,6 @@ import React from "react"
 import Heading from "../common/heading/Heading"
 import "./about.css"
 import { homeAbout } from "../../dummydata"
-import Awrapper from "./Awrapper"
 
 const AboutCard = () => {
   return (
@@ -21,7 +20,7 @@ const AboutCard = () => {
                     <div className='img item_img'>
                       <img src={val.cover} alt='' />
                     </div>
-                    <div className='text'>
+                    <div className='text '>
                       <h2>{val.title}</h2>
                       <p>{val.desc}</p>
                     </div>
@@ -32,7 +31,6 @@ const AboutCard = () => {
           </div>
         </div>
       </section>
-      <Awrapper />
     </>
   )
 }

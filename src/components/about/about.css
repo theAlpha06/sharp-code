@@ -16,8 +16,11 @@
   padding: 1rem;
   padding-bottom: 4rem;
 }
-
+.text{
+  width: 70vw;
+}
 .aboutHome .items {
+  width: 55vw;
   margin-top: 5vh;
 }
 .aboutHome .item {
@@ -41,7 +44,7 @@
   font-size: 0.9rem;
 }
 .aboutHome .item:hover {
-  background-color: #5090cc;
+  background-color: #487c7c;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
@@ -72,17 +75,29 @@
 .awrapper h1 {
   font-size: 50px;
 }
+/* .aboutdata{
+  width: 70vw;
+} */
 .awrapper h3 {
   font-size: 1rem;
   font-weight: 500;
 }
 /*----------awrapper------------*/
+@media screen and (max-width: 450px) {
+  .aboutHome  {
+    padding-top: 40vh;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .aboutHome .container {
     flex-direction: column-reverse;
   }
   .aboutHome .row {
     width: 100%;
+  }
+  .aboutHome{
+    padding-top: 40vh;
   }
   .aboutHome .left img{
     margin-left: 20vw;
@@ -111,18 +126,11 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 1200px){
-  .aboutHome .img {
-    width: 25vw;
-  }
-  .aboutHome .items {
-    margin-top: 1vh;
-  }
-  .aboutHome .right {
-    padding-top: 15vh;
-  }
-}
+
 @media screen and (max-width: 1000px){
+  .aboutHome{
+    padding-top: 40vh;
+  }
   .aboutHome .img {
     width: 25vw;
   }
@@ -143,6 +151,42 @@
     display: none;
   }
  
+}
+@media screen and (max-width: 1200px){
+  .aboutHome .img {
+    width: 25vw;
+  }
+  .aboutHome .items {
+    margin-top: 1vh;
+  }
+  .aboutHome .right {
+    padding-top: 15vh;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .aboutHome{
+    padding-top: 20vh;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .aboutHome{
+    padding-top: 20vh;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .aboutHome{
+    padding-top: 20vh;
+  }
+}
+@media screen and (max-width: 1700px) {
+  .aboutHome{
+    padding-top: 20vh;
+  }
+}
+@media screen and (max-width: 1900px) {
+  .aboutHome{
+    padding-top: 20vh;
+  }
 }
 
 

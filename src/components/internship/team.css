@@ -26,6 +26,7 @@
 }
 .team .details {
   padding: 30px;
+  height: 30vh;  
   text-align: center;
 }
 .team .details h2 {
@@ -34,16 +35,18 @@
   transition: 0.5s;
 }
 .team .details p {
-  font-size: 15px;
+  font-size: 0.7rem;
   color: grey;
-  margin-top: 10px;
+  position: relative;
   transition: 0.5s;
+  line-height: 1.2rem;
 }
 .team .items:hover {
   background-color: #5090cc;
   transform: scale(1.1);
   color: #fff;
   cursor: pointer;
+  
 }
 .team .items:hover p {
   color: #fff;
@@ -54,4 +57,32 @@
 .team .items:hover .overlay i:hover {
   background-color: #5090cc;
   color: #fff;
+}
+
+.items .button{
+  bottom: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  justify-content: center;
+
+}
+.items button{
+  background-color: white;
+  border: solid #5090cc;
+  border-radius: 5%;
+}
+
+
+@media screen and (max-width: 450px){
+  .shadow{
+    align-items: center;
+    width: 80vw;
+  }
+  
+}
+
+@media screen and (max-width: 1100px){
+  .team{
+    padding-top:30vh;
+  }
 }

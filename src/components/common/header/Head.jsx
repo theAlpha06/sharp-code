@@ -6,7 +6,7 @@ const Head = () => {
       <section className='head'>
         <div className='container flexSB'>
         <img
-            style={{ height: "5rem", borderRadius: "50%" }}
+            style={{ height: "5rem", borderRadius: "50%", paddingLeft:"1vw" }}
             src="./images/logo/bg5.png"
             alt="error"
           />

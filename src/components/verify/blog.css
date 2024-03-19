@@ -7,6 +7,7 @@
 .veri input{
   margin: 2vh;
   padding: 1.2vh;
+  width: 20vw;
   border-radius: 5%;
 }
 .veri label{

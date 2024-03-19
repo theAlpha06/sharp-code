@@ -2,20 +2,20 @@ export const homeAbout = [
   {
     id: 1,
     cover: "https://img.icons8.com/dotty/80/000000/storytelling.png",
-    title: "Online Courses",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Industry-Relevant Curriculum",
+    desc: "Tailored curriculum aligns with industry demands, ensuring that interns acquire the skills and knowledge sought after by employers.",
   },
   {
     id: 1,
     cover: "https://img.icons8.com/ios/80/000000/diploma.png",
-    title: "Earn A Certificates",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Performance Recognition",
+    desc: "Your work is acknowledged through certificates and exceptional performance with recommendations, providing interns with tangible proof of your remarkable accomplishments during the internship period.",
   },
   {
     id: 1,
     cover: "https://img.icons8.com/ios/80/000000/athlete.png",
-    title: "Learn with Expert",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Flexible schedule",
+    desc: "We understand the demands of academic life, so our internship offers flexible schedules to accommodate students' academic commitments.",
   },
 ]
 export const awrapper = [
@@ -247,37 +247,37 @@ export const team = [
   {
     cover: "./images/logo/Android-dev.jpg",
     name: "Android-development",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "Dive into Android app development at SHARPCODE, offering a straightforward approach to building your first app. Explore the vast potential of mobile innovation and kickstart your journey towards app development success.",
   },
   {
     cover: "./images/logo/back-end-dev.jpg",
     name: "Backend-development",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "Unleash your potential in our comprehensive 4-week Backend Development internship. Navigate server-side technologies and database management, acquiring skills to build robust, scalable web applications that meet industry standards.",
   },
   {
     cover: "./images/logo/data-analysis.jpg",
     name: "Data-analysis",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "In our focused 4-week internship, students navigate statistical methods and utilize visualization tools to derive insights from data sets. This program equips them to make informed decisions and navigate the complexities of data analysis.",
   },
   {
     cover: "./images/logo/data-science.jpg",
     name: "Data-science",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "Immerse yourself in distinctive remote data science internships, gaining invaluable experience within the virtual workforce. Explore highly sought-after niches, including competitive and favored data analysis opportunities.",
   },
   {
     cover: "./images/logo/front-end-dev.jpg",
     name: "Frontend-development",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "Immerse yourself in our transformative 4-week program, mastering HTML, CSS, and JavaScript. Gain proficiency in creating visually stunning and responsive user interfaces, setting the foundation for dynamic web experiences.",
   },
   {
     cover: "./images/logo/full-stack-dev.jpg",
     name: "Fullstack-development",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "Conquer the intricacies of full stack development in our dynamic 4-week internship. Students seamlessly integrate frontend and backend skills, ensuring a comprehensive understanding of creating responsive, feature-rich web applications.",
   },
   {
     cover: "./images/logo/machine-learning.jpg",
     name: "Machine-learning",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
+    work: "Attain expertise in Machine Learning through our comprehensive 4-week internship, unlocking exciting career prospects. Lay a robust foundation with hands-on experience in web application development and deployment in a nurturing environment.",
   },
   {
     cover: "./images/logo/python-dev.avif",

@@ -11,7 +11,7 @@ const Header = () => {
       <Head />
       <header>
         <nav className='flexSB' >
-          <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
+          <ul className= {click ? "mobile-nav" : "flexSB home"} onClick={() => setClick(false)}>
             <li  >
               <Link to='/'>Home</Link>
             </li>
@@ -29,6 +29,9 @@ const Header = () => {
             </li>
             <li>
               <Link to='/journal'>Verify</Link>
+            </li>
+            <li>
+              <Link to='/signinup'>Login/Signup</Link>
             </li>
           </ul>
           <div className='start' >

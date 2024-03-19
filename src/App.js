@@ -10,6 +10,8 @@ import Contact from "./components/contact/Contact"
 import Footer from "./components/common/footer/Footer"
 import Home from "./components/home/Home"
 import Verify from "./components/verify/Blog"
+// import SignIn from "./components/login-signup/login"
+import Signinup from "./components/Forms/signinup"
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
           
           <Route exact path='/journal' component={Verify} />
           <Route exact path='/contact' component={Contact} />
+          <Route exact path='/signinup' component={Signinup} />
         </Switch>
         <Footer />
       </Router>

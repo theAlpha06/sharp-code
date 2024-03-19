@@ -134,8 +134,8 @@ p {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
 }
 .flex {
   display: flex;
@@ -170,8 +170,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .grid2,
-  .grid3,
-  .grid {
+  .grid3 {
     grid-template-columns: repeat(2, 1fr);
   }
   .back {

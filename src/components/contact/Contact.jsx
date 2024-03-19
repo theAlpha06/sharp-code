@@ -7,16 +7,16 @@ const Contact = () => {
   return (
     <>
       <Back title='Contact us' />
-      <section className='contacts padding'>
-        <div className='container shadow flexSB'>
-          <div className='left row'>
+      <section className='contacts '>
+        <div className='container shadow'>
+          {/* <div className='left row'> */}
             {/* <iframe src={map}></iframe> */}
-          </div>
-          <div className='right row'>
+          {/* </div> */}
+          <div className="contactus">
             <h1>Contact us</h1>
             <p>We're open for any suggestion or just to have a chat</p>
 
-            <div className='items grid2'>
+            {/* <div classNam/e='items grid2'> */}
               {/* <div className='box'>
                 <h4>ADDRESS:</h4>
                 <p>198 West 21th Street, Suite 721 New York NY 10016</p>
@@ -37,8 +37,7 @@ const Contact = () => {
                 <input type='email' placeholder='Email' />
               </div>
               <input type='text' placeholder='Subject' />
-              <textarea cols='30' rows='10'>
-                Create a message here...
+              <textarea cols='30' rows='10' placeholder='Create a message here...'>                
               </textarea>
               <button className='primary-btn'>SEND MESSAGE</button>
             </form>
@@ -46,7 +45,7 @@ const Contact = () => {
             {/* <h3>Follow us here</h3> */}
             {/* <span>FACEBOOK TWITTER INSTAGRAM DRIBBBLE</span> */}
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </>
   )

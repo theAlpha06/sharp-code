@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 1rem;
     padding-bottom: 4rem;
     width: 50%;
@@ -20,6 +21,16 @@
 .form-control{
     background-color: transparent;
     border: none;
+}
+.signinup{
+    text-align: center;
+}
+.signradio{
+    display: flex;
+    margin: 0 40vw;
+}
+.signradio input{
+    height: 20px;
 }
 .primary-btn{
     

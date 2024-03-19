@@ -19,6 +19,9 @@ const TeamCard = () => {
             <h2>{val.name}</h2>
             <p>{val.work}</p>
           </div>
+          <div className="button">
+            <button>Apply Now</button>
+          </div>
         </div>
       ))}
     </>
