@@ -11,7 +11,7 @@ const Head = () => {
             alt="error"
           />
           <div className="logo">
-              <h1>YUVA-INTERN</h1>
+              <h1>SHARP-CODE</h1>
               <span>ONLINE EDUCATION & LEARNING</span>
             </div>
 

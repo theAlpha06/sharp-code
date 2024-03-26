@@ -2,14 +2,11 @@ import React from "react"
 import Heading from "../common/heading/Heading"
 import "./about.css"
 import { homeAbout } from "../../dummydata"
-<<<<<<< HEAD
-=======
-import Awrapper from "./Awrapper"
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react"
 
->>>>>>> e0e023ae42acd3452aa593660636154f917271e2
 
 const AboutCard = () => {
   useEffect(() => {
@@ -31,7 +28,7 @@ const AboutCard = () => {
                     <div className='img item_img'>
                       <img src={val.cover} alt='' />
                     </div>
-                    <div className='text '>
+                    <div className='text'>
                       <h2>{val.title}</h2>
                       <p>{val.desc}</p>
                     </div>

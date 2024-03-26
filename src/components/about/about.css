@@ -5,6 +5,7 @@
   text-align: left;
   padding: 0;
 }
+
 .aboutHome .left img {
   width: 40vw;
   height: 100vh;
@@ -15,9 +16,6 @@
 .aboutHome .right {
   padding: 1rem;
   padding-bottom: 4rem;
-}
-.text{
-  width: 70vw;
 }
 .aboutHome .items {
   width: 55vw;
@@ -33,7 +31,8 @@
   box-shadow: -5px -5px 10px rgba(173, 168, 168, 0.568);
 }
 .aboutHome .img {
-  width: 18vw;
+  /* width: 18vw; */
+  padding-right: 3vw;
 }
 .aboutHome img {
   width: 5vw;
@@ -47,7 +46,7 @@
   font-size: 0.9rem;
 }
 .aboutHome .item:hover {
-  background-color: #487c7c;
+  background-color: #5da3a5;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
@@ -136,10 +135,14 @@
   }
   .aboutHome .img {
     width: 25vw;
+    
   }
+
   .aboutHome .items {
     margin-top: 1vh;
+    width: 90vw;
   }
+
   .awrapper h1{
     font-size: 25px;
   }

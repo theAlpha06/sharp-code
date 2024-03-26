@@ -11,6 +11,9 @@ require("dotenv").config();
 // login--------------------------------------------
 
 exports.login=async(req,res)=>{
+
+    
+
     try {
         // fetch data fromreq body
         const {email,password}=req.body;
@@ -89,7 +92,7 @@ exports.signUp=async(req,res)=>{
             domain,
 
         }=req.body;
-
+        console.log(req);
         // check validation
         if(!firstName || !lastName || !email || !password || !confirmPassword || !domain) {
                 return res.status(403).json({

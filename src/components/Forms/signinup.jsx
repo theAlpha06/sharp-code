@@ -3,8 +3,6 @@ import React from 'react';
 import "./signInup.css"
 // import SignInForm from './Login';
 // import SignUpForm from './SignUp';
-
-
 export default function Signinup() {
 const handlebtn=()=>{
   let main=document.getElementById("main");

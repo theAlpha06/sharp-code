@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux"
 import { toast } from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
-// import { setSignupData } from "../../slices/authSlice";
+import { setSignupData } from "../../slices/authSlice";
 import { signUp } from "../../Services/Operations/apiAuth"
-
+// import axios from "axios";
 import "./Forms.css";
 
 export default function SignUp() {
@@ -34,18 +34,19 @@ export default function SignUp() {
   }
 
   // Handle Form Submission
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async(e) => {
     e.preventDefault()
 
     if (password !== confirmPassword) {
       toast.error("Passwords Do Not Match")
       return
     }
-    // const signupData = {
-    //   ...formData,
-    // }
+    console.log(firstName,lastName,email,password,confirmPassword,domain);
+    const signupData = {
+      ...formData,
+    }
 
-    // dispatch(setSignupData(signupData))
+    dispatch(setSignupData(signupData))
     dispatch(signUp(firstName,
       lastName,
       email,
@@ -55,8 +56,14 @@ export default function SignUp() {
       navigate
       ))
 
-
-    // Reset
+    // try{
+    // let resp = await axios.post('/about',{firstName,lastName,email,password,confirmPassword,domain});
+    // // Reset
+    // }
+    // catch(err){
+    //   toast.error("there is some error bhai>>",err.response.data.message);
+    // }
+    console.log(firstName,lastName,email,password,confirmPassword,domain);
     setFormData({
       firstName: "",
       lastName: "",

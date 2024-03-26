@@ -22,7 +22,7 @@ const Header = () => {
               <Link to='/team'>Internship</Link>
             </li>
             <li>
-              <Link to='/pricing'>FAQ's</Link>
+              <Link to='/faq'>FAQ's</Link>
             </li>
             <li>
               <Link to='/contact'>Contact</Link>
@@ -31,13 +31,8 @@ const Header = () => {
               <Link to='/login'>Login</Link>
             </li>
             <li>
-<<<<<<< HEAD
-              <Link to='/signinup'>Login/Signup</Link>
-            </li>
-=======
               <Link to='/register'>Apply</Link>
             </li>  
->>>>>>> e0e023ae42acd3452aa593660636154f917271e2
           </ul>
           <div className='start' >
             <div className=''>GET INTERNSHIP</div>

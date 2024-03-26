@@ -4,9 +4,19 @@ footer {
 }
 
 .newletter {
-  background-color: #5090cc;
+  background-color: rgba(53,100,100,255);
   padding: 50px 0;
   color: #fff;
+}
+.lastline{
+  text-align: center;
+  background-color: rgba(53,100,100,255);
+  padding: 2rem;
+}
+.lastline a{
+  color: white;
+  padding: 2rem;
+  font-weight: 600;
 }
 
 .newletter .right,
@@ -42,7 +52,7 @@ footer {
 }
 .newletter i {
   padding: 12px;
-  color: #5090cc;
+  color: rgba(53,100,100,255);
   background-color: #fff;
 }
 
@@ -63,7 +73,7 @@ footer .container {
 
 
 footer .logo span {
-  color: #5090cc;
+  color: rgba(53,100,100,255);
   font-size: 14px;
 }
 
@@ -73,7 +83,7 @@ footer .logo p {
 }
 
 footer .logo .icon {
-  background-color: #5090cc;
+  background-color: rgba(53,100,100,255);
   color: white;
   margin-right: 10px;
 }
@@ -89,7 +99,7 @@ footer ul li {
 
 footer .link li::before {
   /* content: "⟶"; */
-  color: #5090cc;
+  color: rgba(53,100,100,255);
   margin-right: 5px;
 }
 
@@ -108,7 +118,7 @@ footer .items img {
 footer .items span,
 footer .items i {
   font-size: 12px;
-  color: #5090cc;
+  color: rgba(53,100,100,255);
   margin-right: 5px;
   text-transform: capitalize;
 }
@@ -126,7 +136,7 @@ footer .last ul li {
 footer .last i {
   width: 60px;
   font-size: 20px;
-  color: #5090cc;
+  color: rgba(53,100,100,255);
 }
 
 
@@ -142,7 +152,7 @@ footer .last i {
 }
 
 .legal i {
-  color: #5090cc;
+  color: black;
 }
 
 .news_container {

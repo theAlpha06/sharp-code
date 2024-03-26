@@ -1,0 +1,30 @@
+
+.faq .container {
+  width: 70vw;
+}
+.faq .box {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 20px;
+
+}
+.faq button {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  right: 0;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 20px;
+}
+.faq h2 {
+  font-weight: 500;
+  position: relative;
+}
+.faq p {
+  padding: 20px;
+}
+.faq .accordion:hover {
+  background-color: rgba(53,100,100,255);
+  color: #fff;
+}

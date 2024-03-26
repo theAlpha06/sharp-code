@@ -13,7 +13,7 @@ export const apiConnector = async (method, url, bodyData = null, headers = null,
     });
     return response.data;
   } catch (error) {
-    console.error("API Request Failed:", error);
+    console.error("API Request Failed bhai........:", error);
     throw error; 
   }
 };

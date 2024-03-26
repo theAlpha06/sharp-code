@@ -17,16 +17,12 @@ const TeamCard = () => {
           <div className='details flip-box-back'>
             <h2>{val.name}</h2>
             <p>{val.work}</p>
-            <Link to="/register"> <button className="btn"  >Apply</button></Link>
+            {/* <Link to="/register"> <button className="btn"  >Apply</button></Link> */}
           </div>
-<<<<<<< HEAD
           <div className="button">
             <button>Apply Now</button>
           </div>
-=======
-          
         </div>
->>>>>>> e0e023ae42acd3452aa593660636154f917271e2
         </div>
       ))}
     </>

@@ -31,12 +31,12 @@ header ul {
   padding-top: 2.6vh;
 }
 header ul li a {
-  color: black;
+  color: white;
   font-weight: 500;
   transition: 0.5s;
 }
 header ul li a:hover {
-  color: #fff;
+  color: black;
 }
 .start {
   display: flex;
@@ -52,6 +52,10 @@ header ul li a:hover {
 }
 .toggle {
   display: none;
+}
+.button .buttonhero{
+  color: white;
+  background-color: black;
 }
 .social{
   padding-top: 3vh;

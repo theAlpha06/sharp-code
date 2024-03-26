@@ -34,7 +34,7 @@ export function signUp(
         domain,
         
       })
-
+      console.log(response);
       console.log("SIGNUP API RESPONSE............", response)
 
       if (!response.success) {

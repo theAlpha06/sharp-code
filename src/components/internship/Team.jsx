@@ -14,11 +14,6 @@ const Team = () => {
           <TeamCard />
         </div>
       </section>
-<<<<<<< HEAD
-      
-=======
-      <Awrapper />
->>>>>>> e0e023ae42acd3452aa593660636154f917271e2
     </>
   )
 }

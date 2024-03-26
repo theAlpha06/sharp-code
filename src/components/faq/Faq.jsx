@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { faq } from "../../dummydata"
 import Heading from "../common/heading/Heading"
+import Back from "../common/back/Back"
+import "./faq.css"
 
 const Faq = () => {
   const [click, setClick] = useState(false)
@@ -14,8 +16,10 @@ const Faq = () => {
 
   return (
     <>
+      <Back title="FAQ's" />
       <Heading subtitle='FAQS' title='Frequesntly Ask Question' />
-      <section className='faq'>
+      <div className="container">
+      <section className='faq faqs'>
         <div className='container'>
           {faq.map((val, index) => (
             <div className='box'>
@@ -32,6 +36,7 @@ const Faq = () => {
           ))}
         </div>
       </section>
+      </div>
     </>
   )
 }
