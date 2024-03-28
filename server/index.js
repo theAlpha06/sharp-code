@@ -7,11 +7,11 @@ const certificateRoutes=require("./routes/Certificate");
 const userDetailRoutes=require("./routes/UserDetail")
 const cors=require("cors");
 const dbConnect=require("./config/database");
+const bodyParser = require("body-parser");
 const cookieParser=require("cookie-parser");
 const {cloudinaryConnect}=require("./config/cloudinary");
 const fileUpload=require("express-fileupload")
 require("dotenv").config();
-const bodyParser = require("body-parser");
 
 const PORT=process.env.PORT|| 4000;
 
@@ -19,8 +19,7 @@ dbConnect();
 
 app.use(express.json());
 app.use(bodyParser.json());
-
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(cookieParser());
 
 app.use(
@@ -35,14 +34,13 @@ app.use(
         origin:"*",
         credentials:true,
     })
-    );
-    
-    //cloudinar connection
-    cloudinaryConnect();
-    
-console.log("hii from backend bhai>>>>>>>>>>>");
+);
+
+//cloudinar connection
+cloudinaryConnect();
+
 //routes
-app.use("api/v2/auth",userRoutes);
+app.use("/api/v2/auth",userRoutes);
 app.use("/api/v2/profile",profileRoutes);
 app.use("/api/v2/certificate",certificateRoutes);
 app.use("/api/v2/userdetail",userDetailRoutes);
