@@ -25,7 +25,7 @@ export function signUp(
     dispatch(setLoading(true))
     try {
 
-      const response = await apiConnector("POST", SIGNUP_API, {
+      const response = await apiConnector("POST", 'http://localhost:4000/api/v2/auth/signup', {
         firstName,
         lastName,
         email,

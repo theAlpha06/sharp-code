@@ -32,7 +32,7 @@ const Header = () => {
             </li>
             <li>
               <Link to='/register'>Apply</Link>
-            </li>  
+            </li>
           </ul>
           <div className='start' >
             <div className=''>GET INTERNSHIP</div>

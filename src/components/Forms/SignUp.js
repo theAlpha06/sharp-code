@@ -6,6 +6,7 @@ import { setSignupData } from "../../slices/authSlice";
 import { signUp } from "../../Services/Operations/apiAuth"
 // import axios from "axios";
 import "./Forms.css";
+import axios from "axios";
 
 export default function SignUp() {
   const navigate = useNavigate()
@@ -45,7 +46,7 @@ export default function SignUp() {
     const signupData = {
       ...formData,
     }
-
+    try{
     dispatch(setSignupData(signupData))
     dispatch(signUp(firstName,
       lastName,
@@ -55,6 +56,12 @@ export default function SignUp() {
       domain,
       navigate
       ))
+    // const response=axios.post('http://localhost:4000/api/v2/auth/signup',{firstName,lastName,email,password,confirmPassword,domain})
+    // console.log(response);
+    }
+    catch(err){
+      toast.error("there is some error bhai>>",err.response.data.message);
+    }
 
     // try{
     // let resp = await axios.post('/about',{firstName,lastName,email,password,confirmPassword,domain});

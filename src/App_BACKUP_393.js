@@ -24,16 +24,16 @@ function App() {
         <Header />
         <Switch>
           {/* <Verify/> */}
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/courses' component={CourseHome} />
-          <Route exact path='/team' component={Team} />
-          <Route exact path='/pricing' component={Pricing} />
+          <Route exact path='/' element={Home} />
+          <Route exact path='/about' element={About} />
+          <Route exact path='/courses' element={CourseHome} />
+          <Route exact path='/team' element={Team} />
+          <Route exact path='/pricing' element={Pricing} />
           {/* <Route exact path='/journal' component={Blog} /> */}
           
-          <Route exact path='/journal' component={Verify} />
-          <Route exact path='/contact' component={Contact} />
-          <Route exact path='/signinup' component={Signinup} />
+          <Route exact path='/journal' element={Verify} />
+          <Route exact path='/contact' element={Contact} />
+          <Route exact path='/signinup' element={Signinup} />
         </Switch>
         <Routes>
           <Route exact path='/' element={<Home />} />

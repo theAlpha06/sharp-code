@@ -82,6 +82,7 @@ exports.login=async(req,res)=>{
 // signup-----------------------------------------
 
 exports.signUp=async(req,res)=>{
+    console.log("hii from signup");
     try {
         const  {
             firstName,
@@ -92,7 +93,6 @@ exports.signUp=async(req,res)=>{
             domain,
 
         }=req.body;
-        console.log(req);
         // check validation
         if(!firstName || !lastName || !email || !password || !confirmPassword || !domain) {
                 return res.status(403).json({
@@ -149,6 +149,7 @@ exports.signUp=async(req,res)=>{
         })
 
         //return res
+        console.log("hi from me my dear");
         return res.status(200).json({
             success:true,
             message:'User is registered Successfully',

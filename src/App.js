@@ -22,16 +22,6 @@ function App() {
         
         <Header />
         <Routes>
-          {/* <Verify/> */}
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/courses' component={CourseHome} />
-          <Route exact path='/team' component={Team} />
-          <Route exact path='/faq' component={Faq} />          
-          <Route exact path='/journal' component={Verify} />
-          <Route exact path='/contact' component={Contact} />
-        </Routes>
-        <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/courses' element={<CourseHome />} />
@@ -42,6 +32,16 @@ function App() {
           <Route exact path='/contact' element={<Contact />} />
           <Route path="/user/profile" element={<Profile />} />
         </Routes>
+        {/* <Routes>
+          //{ <Verify/> }
+          <Route exact path='/' element={Home} />
+          <Route exact path='/about' element={About} />
+          <Route exact path='/courses' element={CourseHome} />
+          <Route exact path='/team' element={Team} />
+          <Route exact path='/faq' element={Faq} />          
+          <Route exact path='/journal' element={Verify} />
+          <Route exact path='/contact' element={Contact} />
+        </Routes> */}
         <Footer/>
       </Router>
       <Toaster />

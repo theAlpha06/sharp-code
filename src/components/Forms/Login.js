@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"
 import {useNavigate } from 'react-router-dom'
 import { login } from "../../Services/Operations/apiAuth"
 import "./Forms.css";
-import axios from "axios";
+// import axios from "axios";
 export default function Login() {
 
     const navigate = useNavigate();
@@ -24,9 +24,9 @@ export default function Login() {
     }
 
     const handleOnSubmit = async(e) => {
-        // e.preventDefault()
-        // dispatch(login(email, password, navigate))
-        e.preventDefault();
+        e.preventDefault()
+        dispatch(login(email, password, navigate))
+    //     e.preventDefault();
     // try {
     //   let name=document.querySelector('input[name=""]').value;
     //   let email=document.querySelector('input[type="email"]').value;
