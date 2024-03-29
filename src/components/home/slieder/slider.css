@@ -2,7 +2,8 @@
   .ourcourses{
     text-align: center;
     padding: 10vh 0 0 0;
-    color: rgba(53,100,100,255);
+    color: #3491B2;
+    font-weight: 700;
   }
   body {
     background: #eee;
@@ -93,7 +94,7 @@
     gap: 2rem;
    overflow: hidden;
     /* background:linear-gradient(to top left,white,#5090ccb0,white,#5090cc9a); */
-    background-color: rgba(53,100,100,255);
+    background-color: #3491B2;
     background-color: white;
     /* border-radius: 0 3rem ; */
     margin: 1rem;
@@ -109,7 +110,7 @@
 .card:hover{
   transform: scale(1.1);
   transition: 0.5s;
-  background-color: #5da3a5;
+  background-color: #8FC8E3;
   color: white;
   
 }
@@ -125,7 +126,7 @@
 }
 .card__img{
     width: 100%; 
-    color: rgba(53,100,100,255);
+    color: #3491B2;
     /* border-radius: 1rem 1rem  0 0; */
 }
 
@@ -146,12 +147,12 @@
 .btn{
     padding: 0.6rem 1rem;
     border-radius: 0.5rem;
-    border: 1px solid rgba(53,100,100,255);
+    border: 1px solid #3491B2;
     background-color: white;
     font-weight: 600;
     font-size: 0.8rem;
     margin: 0.5rem 0;
     transition: all 1s;
-    color: rgba(53,100,100,255);
+    color: #3491B2;
 }
 

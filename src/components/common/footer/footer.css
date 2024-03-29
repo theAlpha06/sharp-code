@@ -10,7 +10,7 @@ footer {
 }
 .lastline{
   text-align: center;
-  background-color: rgba(53,100,100,255);
+  background-color: #34A1CA;
   padding: 2rem;
 }
 .lastline a{
@@ -52,7 +52,7 @@ footer {
 }
 .newletter i {
   padding: 12px;
-  color: rgba(53,100,100,255);
+  color: #3491B2;
   background-color: #fff;
 }
 
@@ -73,7 +73,7 @@ footer .container {
 
 
 footer .logo span {
-  color: rgba(53,100,100,255);
+  color: #3491B2;
   font-size: 14px;
 }
 
@@ -83,7 +83,7 @@ footer .logo p {
 }
 
 footer .logo .icon {
-  background-color: rgba(53,100,100,255);
+  background-color: #3491B2;
   color: white;
   margin-right: 10px;
 }

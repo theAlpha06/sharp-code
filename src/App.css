@@ -33,7 +33,7 @@ body {
 }
 .icon:hover {
   cursor: pointer;
-  background-color: black;
+  background-color: #3491B2;
   color: #fff;
 }
 a {
@@ -85,9 +85,10 @@ button:hover {
   padding: 40px 0;
 }
 #heading h3 {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
-  color: rgba(53,100,100,255);
+  color: #3491B2;
+  font-size: 5vh;
   text-transform: uppercase;
   /* text-align: center; */
 }
