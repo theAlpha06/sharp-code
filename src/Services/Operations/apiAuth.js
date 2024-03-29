@@ -34,7 +34,7 @@ export function signUp(
         domain,
         
       })
-      console.log(response);
+      console.log(response.message);
       console.log("SIGNUP API RESPONSE............", response)
 
       if (!response.success) {
@@ -44,7 +44,7 @@ export function signUp(
       
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
-      toast.error("Registration Failed Please try again.")
+      toast.error(error.message)
       navigate("/register")
     }
     dispatch(setLoading(false))

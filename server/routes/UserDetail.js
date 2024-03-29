@@ -3,11 +3,12 @@ const router = express.Router();
 
 const { 
     findUser,
-    deleteUser
+    deleteUser,
+    getUserSecurity
 } = require("../controllers/User");
 
-
-router.get("/userDetail", findUser);
+console.log("hii from userdetails");
+router.get("/userDetail",getUserSecurity,findUser);
 router.get("/deleteUser", deleteUser)
 
 

@@ -39,6 +39,7 @@ app.use(
 //cloudinar connection
 cloudinaryConnect();
 
+console.log("Hii from index.js");
 //routes
 app.use("/api/v2/auth",userRoutes);
 app.use("/api/v2/profile",profileRoutes);

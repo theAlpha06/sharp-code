@@ -33,7 +33,6 @@ function App() {
           <Route path="/user/profile" element={<Profile />} />
         </Routes>
         {/* <Routes>
-          //{ <Verify/> }
           <Route exact path='/' element={Home} />
           <Route exact path='/about' element={About} />
           <Route exact path='/courses' element={CourseHome} />
