@@ -46,12 +46,12 @@ const Footer = () => {
         <p>
           Copyright ©2022 All rights reserved | This template is made with <i className='fa fa-heart'></i> by GorkhCoder
         </p>
-      </div>
       <hr/>
       <div className="lastline">
         <a href="privacy">Privacy</a>
         <a href="Terms&conditions">Terms & Conditions</a>
         <a href="Feedbacks">Feedbacks</a>
+      </div>
       </div>
     </div>
   )

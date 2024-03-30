@@ -37,7 +37,7 @@ header ul li a {
   transition: 0.5s;
 }
 header ul li a:hover {
-  color: black;
+  color: #3491B2;
 }
 .start {
   display: flex;

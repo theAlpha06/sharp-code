@@ -1,6 +1,7 @@
 
 .faq .container {
   width: 70vw;
+  padding-bottom: 1rem;
 }
 .faq .box {
   background-color: #fff;
@@ -25,6 +26,6 @@
   padding: 20px;
 }
 .faq .accordion:hover {
-  background-color: rgba(53,100,100,255);
+  background-color: #3491B2;
   color: #fff;
 }

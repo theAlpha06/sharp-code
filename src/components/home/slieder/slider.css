@@ -110,7 +110,7 @@
 .card:hover{
   transform: scale(1.1);
   transition: 0.5s;
-  background-color: #8FC8E3;
+  background-color: #3491B2;
   color: white;
   
 }
