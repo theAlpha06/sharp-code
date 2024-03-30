@@ -105,10 +105,14 @@ const mongoose = require("mongoose");
 
 exports.findUser = async (req, res) => {
     try {
-        const email = req.body.email;
-        
-        const user = await User.findOne({ email });
-        console.log("hii from frinduser")
+        const { user } = useSelector((state) => state.profile)
+        console.log("here is your UseSelector user data : ",user);
+        const emailId = req.cookies.email;
+        const userdata = await User.findOne({ "email":emailId });
+        console.log("there is some additional details :",userdata.additionalDetails);
+        const response=await User.findById(user.additionalDetails);
+        console.log(response);
+        // console.log("hii from finduser",user);
         if (!user) {
             console.log("finduser.....: there is errror ");
             return res.status(404).json({
@@ -116,14 +120,10 @@ exports.findUser = async (req, res) => {
                 message: "User not found with this email",
             });
         }
-        console.log(user);
-        
 
         const userDetails = await User.findById(user._id)
             .populate("additionalDetails")
             .exec();
-        
-        console.log(userDetails);
         
         res.send({
             success: true,

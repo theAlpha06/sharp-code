@@ -8,8 +8,9 @@
 .contacts p {
   color: grey;
 }
-.contacts .items {
-  /* margin:  0; */
+.primbtn{
+  margin-left: 42vw;
+  margin-bottom: 10vh;
 }
 .contacts .box p {
   font-size: 17px;

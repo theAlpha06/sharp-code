@@ -39,7 +39,7 @@ const Contact = () => {
               <input type='text' placeholder='Subject' />
               <textarea cols='30' rows='10' placeholder='Create a message here...'>                
               </textarea>
-              <button className='primary-btn'>SEND MESSAGE</button>
+              <button className='primary-btn primbtn'>SEND MESSAGE</button>
             </form>
 
             {/* <h3>Follow us here</h3> */}

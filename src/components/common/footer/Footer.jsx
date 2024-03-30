@@ -8,12 +8,12 @@ const Footer = () => {
       <footer>
         <div className='container padding'>
           <div className='box logo'>
-            <h1>YUVA-INTERN</h1>
+            <h1>SHARP-CODE</h1>
             <span>ONLINE EDUCATION & LEARNING</span>
             <p className="footp">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
 
             <i className='fab fa-facebook-f icon'></i>
-            <i className='fab fa-twitter icon'></i>
+            {/* <i className='fab fa-twitter icon'></i> */}
             <i className='fab fa-instagram icon'></i>
             <i className='fab fa-linkedin icon'></i>
           </div>

@@ -8,7 +8,7 @@ const {
 } = require("../controllers/User");
 
 console.log("hii from userdetails");
-router.get("/userDetail",getUserSecurity,findUser);
+router.get("/userDetail",findUser);
 router.get("/deleteUser", deleteUser)
 
 

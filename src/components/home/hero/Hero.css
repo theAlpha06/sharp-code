@@ -1,12 +1,9 @@
 .hero {
   background-image: url("../../../../public/images/bg5.jpg");
   background-size: cover;
-  /* background-attachment: fixed; */
   position: absolute;
-  /* top: 0; */
   left: 0;
   z-index: -1;
-  background-position: center;
   max-width: 100%;
   min-height: 80%;
   height: auto;

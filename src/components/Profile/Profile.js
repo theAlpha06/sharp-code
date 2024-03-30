@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { apiConnector } from "../../Services/apiConnectors";
+// import { apiConnector } from "../../Services/apiConnectors";
+import axios from "axios";
 
 export default function Profile() {
   const { user } = useSelector((state) => state.profile);
@@ -11,7 +12,8 @@ export default function Profile() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await apiConnector("GET", 'http://localhost:4000/api/v2/userdetail/userDetail');
+        // const response = await apiConnector("GET", 'http://localhost:4000/api/v2/userdetail/userDetail');
+        const response =await axios.get('http://localhost:4000/api/v2/userdetail/userDetail');
         setUserDetails(response.data);
         setLoading(false);
       } catch (error) {
