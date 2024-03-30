@@ -10,7 +10,7 @@ const Footer = () => {
           <div className='box logo'>
             <h1>SHARP-CODE</h1>
             <span>ONLINE EDUCATION & LEARNING</span>
-            <p className="footp">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p className="footp">Don't let your university, Become a hendrence in your learning</p>
 
             <i className='fab fa-facebook-f icon'></i>
             {/* <i className='fab fa-twitter icon'></i> */}
