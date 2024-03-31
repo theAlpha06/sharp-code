@@ -34,10 +34,8 @@ const Footer = () => {
             <hr />
             <ul>
               <li>Contact Us</li>
-              <li>Pricing</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy</li>
-              <li>Feedbacks</li>
+              <li><i className='fa fa-mobile'></i> +91-1234567809</li>
+              <li><i className='fa fa-home'></i>  Har jagah ham hi hai jaha dekhna vahi mil lena</li>
             </ul>
           </div>
         </div>
