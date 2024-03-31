@@ -1,112 +1,118 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-// import { apiConnector } from "../../Services/apiConnectors";
-import axios from "axios";
 
-export default function Profile() {
-  const { user } = useSelector((state) => state.profile);
-  const [userDetails, setUserDetails] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+import { useSelector } from "react-redux"
+// import axios from "axios";
+import { apiConnector } from "../../Services/apiConnectors";
+// import { useNavigate } from "react-router-dom"
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        // const response = await apiConnector("GET", 'http://localhost:4000/api/v2/userdetail/userDetail');
-        const response =await axios.get('http://localhost:4000/api/v2/userdetail/userDetail');
-        setUserDetails(response.data);
-        setLoading(false);
-      } catch (error) {
-        setError(error.message);
-        setLoading(false);
-      }
-    };
+// import { formattedDate } from "../../../utils/dateFormatter"
+// import IconBtn from "../../Common/IconBtn"
 
-    fetchUserData();
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+export default async function Profile() {
+  // const { user } = useSelector((state) => state.profile)
+  console.log('hii from profile');
+  const {user}= await apiConnector('get','http://localhost:4000/api/v2/userdetail/userDetail');
+  // const navigate = useNavigate()
+console.log(user);
 
   return (
     <>
-      <h1 className="">My Profile</h1>
-      {userDetails && (
+      <h1 className="">
+        My Profile
+      </h1>
+      <div className="">
         <div className="">
-          <div className="">
-            <div className="s">
-              <p className="">{userDetails.firstName} {userDetails.lastName}</p>
-              <p className="">{userDetails.email}</p>
-            </div>
+          
+          <div className="s">
+            <p className="">
+              {user.firstName + " " + user.lastName}
+            </p>
+            <p className="">{user?.email}</p>
           </div>
         </div>
-      )}
-      {userDetails && (
+        
+          
+        
+      </div>
+      <div className="">
         <div className="">
-          <div className="">
-            <p className="">About</p>
-          </div>
-          <p
-            className={`${
-              userDetails.additionalDetails?.about
-                ? "text-richblack-5"
-                : "text-richblack-400"
-            } text-sm font-medium`}
-          >
-            {userDetails.additionalDetails?.about ?? "Write Something About Yourself"}
+          <p className="">About</p>
+          {/* <IconBtn
+            text="Edit"
+            onclick={() => {
+              navigate("/dashboard/settings")
+            }}
+          > */}
+          
+          {/* </IconBtn> */}
+        </div>
+        <p
+          className={`${
+            user?.additionalDetails?.about
+              ? "text-richblack-5"
+              : "text-richblack-400"
+          } text-sm font-medium`}
+        >
+          {user?.additionalDetails?.about ?? "Write Something About Yourself"}
+        </p>
+      </div>
+      <div className="">
+        <div className="">
+          <p className="">
+            Personal Details
           </p>
+          {/* <IconBtn
+            text="Edit"
+            onclick={() => {
+              navigate("/dashboard/settings")
+            }}
+          >
+           
+          </IconBtn> */}
         </div>
-      )}
-      {userDetails && (
-        <div className="">
-          <div className="">
-            <p className="">Personal Details</p>
-          </div>
-          <div className="flex max-w-[500px] justify-between">
-            <div className="flex flex-col gap-y-5">
-              <div>
-                <p className="mb-2 text-sm text-richblack-600">First Name</p>
-                <p className="text-sm font-medium text-richblack-5">
-                  {userDetails.firstName}
-                </p>
-              </div>
-              <div>
-                <p className="mb-2 text-sm text-richblack-600">Email</p>
-                <p className="text-sm font-medium text-richblack-5">
-                  {userDetails.email}
-                </p>
-              </div>
-              <div>
-                <p className="mb-2 text-sm text-richblack-600">Gender</p>
-                <p className="text-sm font-medium text-richblack-5">
-                  {userDetails.additionalDetails?.gender ?? "Add Gender"}
-                </p>
-              </div>
+        <div className="flex max-w-[500px] justify-between">
+          <div className="flex flex-col gap-y-5">
+            <div>
+              <p className="mb-2 text-sm text-richblack-600">First Name</p>
+              <p className="text-sm font-medium text-richblack-5">
+                {user?.firstName}
+              </p>
             </div>
-            <div className="flex flex-col gap-y-5">
-              <div>
-                <p className="mb-2 text-sm text-richblack-600">Last Name</p>
-                <p className="text-sm font-medium text-richblack-5">
-                  {userDetails.lastName}
-                </p>
-              </div>
-              <div>
-                <p className="mb-2 text-sm text-richblack-600">Phone Number</p>
-                <p className="text-sm font-medium text-richblack-5">
-                  {userDetails.additionalDetails?.contactNumber ?? "Add Contact Number"}
-                </p>
-              </div>
-              <div>
-                <p className="mb-2 text-sm text-richblack-600">Date Of Birth</p>
-                {/* <p className="text-sm font-medium text-richblack-5">
-                  {formattedDate(userDetails.additionalDetails?.dateOfBirth) ??
-                    "Add Date Of Birth"}
-                </p> */}
-              </div>
+            <div>
+              <p className="mb-2 text-sm text-richblack-600">Email</p>
+              <p className="text-sm font-medium text-richblack-5">
+                {user?.email}
+              </p>
+            </div>
+            <div>
+              <p className="mb-2 text-sm text-richblack-600">Gender</p>
+              <p className="text-sm font-medium text-richblack-5">
+                {user?.additionalDetails?.gender ?? "Add Gender"}
+              </p>
             </div>
           </div>
+          <div className="flex flex-col gap-y-5">
+            <div>
+              <p className="mb-2 text-sm text-richblack-600">Last Name</p>
+              <p className="text-sm font-medium text-richblack-5">
+                {user?.lastName}
+              </p>
+            </div>
+            <div>
+              <p className="mb-2 text-sm text-richblack-600">Phone Number</p>
+              <p className="text-sm font-medium text-richblack-5">
+                {user?.additionalDetails?.contactNumber ?? "Add Contact Number"}
+              </p>
+            </div>
+            <div>
+              <p className="mb-2 text-sm text-richblack-600">Date Of Birth</p>
+              {/* <p className="text-sm font-medium text-richblack-5">
+                {formattedDate(user?.additionalDetails?.dateOfBirth) ??
+                  "Add Date Of Birth"}
+              </p> */}
+            </div>
+          </div>
         </div>
-      )}
+      </div>
     </>
-  );
+  )
 }

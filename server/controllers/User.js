@@ -99,19 +99,18 @@
 
 
 
+const { response } = require("express");
 const Profile = require("../models/Profile");
 const User = require("../models/User");
 const mongoose = require("mongoose");
 
 exports.findUser = async (req, res) => {
     try {
-        const { user } = useSelector((state) => state.profile)
-        console.log("here is your UseSelector user data : ",user);
-        const emailId = req.cookies.email;
-        const userdata = await User.findOne({ "email":emailId });
-        console.log("there is some additional details :",userdata.additionalDetails);
-        const response=await User.findById(user.additionalDetails);
-        console.log(response);
+        console.log(req.cookies.token);
+        const user= await User.findOne({"email":req.cookies.email})
+        // console.log(user.additionalDetails);
+        // const response=await Profile.findById(user.additionalDetails);
+        // console.log(response);
         // console.log("hii from finduser",user);
         if (!user) {
             console.log("finduser.....: there is errror ");
@@ -124,6 +123,7 @@ exports.findUser = async (req, res) => {
         const userDetails = await User.findById(user._id)
             .populate("additionalDetails")
             .exec();
+        console.log(userDetails);
         
         res.send({
             success: true,

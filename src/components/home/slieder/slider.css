@@ -71,6 +71,8 @@
   overflow: scroll;
   width: 100%;
   padding: 2rem 0.5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
   
 }
 

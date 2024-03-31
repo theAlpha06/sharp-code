@@ -41,6 +41,7 @@ export function signUp(
         throw new Error(response.message)
       }
       toast.success("Register Successful")
+      navigate("/login")
       
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
@@ -70,7 +71,6 @@ export function login(email, password, navigate) {
       }
 
       console.log("LOGIN API RESPONSE............ successful")
-
       toast.success("Login Successful")
       dispatch(setToken(response.token))
       // const userImage = response.data?.user?.image
@@ -78,6 +78,7 @@ export function login(email, password, navigate) {
       //   : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`
       // dispatch(setUser({ ...response.data.user, image: userImage }))
       localStorage.setItem("token", JSON.stringify(response.token))
+      localStorage.setItem("email", JSON.stringify(response.email))
       navigate("/user/profile")
     } catch (error) {
       console.log("LOGIN API ERROR............", error)
