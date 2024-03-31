@@ -23,10 +23,10 @@ const Footer = () => {
             <hr />
             <ul>
               <li>About Us</li>
-              <li>Services</li>
-              <li>Courses</li>
-              <li>Blog</li>
-              <li>Contact us</li>
+              <li>Internship</li>
+              <li>FAQ</li>
+              <li>Login</li>
+              <li>Registration</li>
             </ul>
           </div>
           <div className='box link'>
