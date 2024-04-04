@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux"
 import {useNavigate } from 'react-router-dom'
 import { login } from "../../Services/Operations/apiAuth"
 import "./Forms.css";
-// import axios from "axios";
 export default function Login() {
 
     const navigate = useNavigate();
@@ -26,20 +25,6 @@ export default function Login() {
     const handleOnSubmit = async(e) => {
         e.preventDefault()
         dispatch(login(email, password, navigate))
-    //     e.preventDefault();
-    // try {
-    //   let name=document.querySelector('input[name=""]').value;
-    //   let email=document.querySelector('input[type="email"]').value;
-    //   let password=document.querySelector('input[type="password"]').value;
-      
-    //   let resp=await axios.post('/auth/signup',{email,name,password});
-    //   console.log(name,email,password);
-    //   console.log('resp : ',resp);
-    // }
-    // catch(err){
-    //     return resizeBy.send({msg:err.massage});
-
-    // }
 }
 
     return (
@@ -73,6 +58,8 @@ export default function Login() {
                     <label></label>
                     <button type="submit" className="primary-btn btn">Login</button>
                 </div>
+                <a className="createnewact" href="">Forget password?</a> |
+                <a className="createnewact" href="/register"> create new account?</a>
             </form>
         </div>
         </div>

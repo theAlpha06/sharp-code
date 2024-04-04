@@ -282,7 +282,7 @@ export const team = [
   {
     cover: "./images/logo/python-dev.avif",
     name: "Python-development",
-    work: "Enroll in our extensive 4-week internship, where you'll delve into Python programming essentials from the convenience of your home. Acquire expertise to pursue compelling career paths. Covering web development to deploying Python web apps, the program ensures a comprehensive learning experience. Attain certification, elevating your professional trajectory. Seize the chance to thrive in Python programming!",
+    work: "Enroll in our extensive 4-week internship, delving into Python programming essentials from home. Acquire expertise in web development and deploying Python web apps, earning certification and elevating your professional trajectory.",
   },
 ]
 export const price = [

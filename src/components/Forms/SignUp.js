@@ -90,8 +90,8 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="firstName"
-            placeholder="First Name"
+            name="LinkedIn Profile Link"
+            placeholder="LinkedIn Profile Link"
             value={firstName}
             onChange={handleOnChange}
             required
@@ -102,8 +102,8 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="lastName"
-            placeholder="Last name"
+            name="GitHub Profile Link"
+            placeholder="GitHub Profile Link"
             value={lastName}
             onChange={handleOnChange}
             required
@@ -114,8 +114,8 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="email"
-            placeholder="Email"
+            name="Task1 GitHub Link"
+            placeholder="Task1 GitHub Link"
             value={email}
             onChange={handleOnChange}
             required
@@ -126,34 +126,58 @@ export default function SignUp() {
         <div className="form-control">
 
           <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={password}
-            onChange={handleOnChange}
-            required
-          />
-        </div>
-
-        <div className="form-control">
-
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm Password"
+            type="text"
+            name="Task1 LinkedIn Link"
+            placeholder="Task1 LinkedIn Link"
             value={confirmPassword}
             onChange={handleOnChange}
             required
           />
         </div>
+        <div className="form-control">
+
+          <input
+            type="text"
+            name="Task2 GitHub Link"
+            placeholder="Task2 GitHub Link"
+            value={email}
+            onChange={handleOnChange}
+            required
+          />
+        </div>
+
 
         <div className="form-control">
 
           <input
             type="text"
-            name="domain"
-            placeholder="Domain of Internship"
-            value={domain}
+            name="Task2 LinkedIn Link"
+            placeholder="Task2 LinkedIn Link"
+            value={confirmPassword}
+            onChange={handleOnChange}
+            required
+          />
+        </div>
+        <div className="form-control">
+
+          <input
+            type="text"
+            name="Task3 GitHub Link"
+            placeholder="Task3 GitHub Link"
+            value={email}
+            onChange={handleOnChange}
+            required
+          />
+        </div>
+
+
+        <div className="form-control">
+
+          <input
+            type="text"
+            name="Task3 LinkedIn Link"
+            placeholder="Task3 LinkedIn Link"
+            value={confirmPassword}
             onChange={handleOnChange}
             required
           />
@@ -163,7 +187,8 @@ export default function SignUp() {
         <div className="form-control ">
           <label></label>
           <button type="submit" className="primary-btn btn" >Register</button>
-        </div>
+        </div> or 
+        <a className="createnewact" href="/submission">  Login?</a>
       </form>
     </div>
   );

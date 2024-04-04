@@ -6,8 +6,8 @@ const Head = () => {
       <section className='head'>
         <div className='container flexSB'>
         <img
-            style={{ height: "5rem", borderRadius: "50%", paddingLeft:"1vw" }}
-            src="./images/logo/bg5.png"
+            style={{ height: "5rem" }}
+            src="./images/logo/bg7.png"
             alt="error"
           />
           <div className="logo">

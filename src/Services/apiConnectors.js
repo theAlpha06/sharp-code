@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const apiConnector = async (method, url, data = null) => {
   try {
+    console.log(data);
     console.log("hii from apiconnector");
     const response = await axios({
       method: method,

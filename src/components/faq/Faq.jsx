@@ -16,7 +16,7 @@ const Faq = () => {
 
   return (
     <>
-      <Back title="FAQ's" />
+      {/* <Back title="FAQ's" /> */}
       <Heading subtitle='FAQS' title='Frequesntly Ask Question' />
       <div className="container">
       <section className='faq faqs'>
@@ -41,4 +41,4 @@ const Faq = () => {
   )
 }
 
-export default Faq
+export default Faq;

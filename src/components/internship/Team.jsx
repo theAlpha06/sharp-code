@@ -3,6 +3,7 @@ import Back from "../common/back/Back"
 import TeamCard from "./TeamCard"
 import "./team.css"
 import "../about/about.css"
+import Faq from "../faq/Faq"
 
 
 const Team = () => {
@@ -14,6 +15,7 @@ const Team = () => {
           <TeamCard />
         </div>
       </section>
+      <Faq/>
     </>
   )
 }

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import About from "./components/about/About"
 import CourseHome from "./components/allcourses/CourseHome"
 import Team from "./components/internship/Team"
-import Faq from "./components/faq/Faq"
+// import Faq from "./components/faq/Faq"
 import Contact from "./components/contact/Contact"
 import Footer from "./components/common/footer/Footer"
 import Home from "./components/home/Home"
@@ -26,7 +26,7 @@ function App() {
           <Route exact path='/about' element={<About />} />
           <Route exact path='/courses' element={<CourseHome />} />
           <Route exact path='/team' element={<Team />} />
-          <Route exact path='/faq' element={<Faq />} />
+          {/* <Route exact path='/faq' element={<Faq />} /> */}
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register' element={<SignUp />} />
           <Route exact path='/contact' element={<Contact />} />

@@ -11,6 +11,7 @@ dotenv.config();
 exports.login = async (req, res) => {
   try {
     // fetch data from req body
+    console.log(req.body);
     const { email, password } = req.body;
 
     // validate data
@@ -20,6 +21,7 @@ exports.login = async (req, res) => {
         message: "All fields are required, Please try again",
       });
     }
+
     // check if user exists
     const user = await User.findOne({ email });
 
@@ -41,19 +43,19 @@ exports.login = async (req, res) => {
       const token = jwt.sign(payload, process.env.JWT_SECRET, {
         expiresIn: "24h",
       });
-      user.token = token;
-      user.password = undefined;
-
-      // create cookie and send response
-      const options = {
-        expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
+      
+      // set cookies
+      res.cookie("token", token, {
+        maxAge: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
         httpOnly: true,
-      };
+      });
+      
+      res.cookie("email", email, {
+        maxAge: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
+        httpOnly: true,
+      });
 
-      // Setting cookies
-      res.cookie("token", token, options);
-      res.cookie("email", user.email, options);
-
+      // Send success response
       return res.status(200).json({
         success: true,
         token,

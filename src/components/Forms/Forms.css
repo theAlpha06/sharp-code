@@ -7,13 +7,20 @@
     text-align: center;
     margin: 1rem;
     padding-bottom: 4rem;
-    width: 50%;
+    width: 25%;
     margin: auto;
     position: relative;
     background-color: white;
     margin: 2rem auto;
     box-shadow: 0 -5px 10px rgb(192, 182, 182);
     
+}
+.createnewact{
+    color: black;
+    font-size: 12px;
+}
+.createnewact:hover{
+    color: #5090cc;
 }
 
 .form__box{
@@ -55,8 +62,10 @@ textarea:focus, input:focus{
     outline: none;
 }
 .title{
-    color: #5090cc;
-    padding: 2rem;
+    border-radius: 0 50%;
+    background-color: #5090cc;
+    color: white;
+    padding: 1rem 2rem 2rem ;
 
 }
 

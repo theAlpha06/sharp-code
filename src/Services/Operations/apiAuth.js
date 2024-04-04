@@ -79,6 +79,7 @@ export function login(email, password, navigate) {
       // dispatch(setUser({ ...response.data.user, image: userImage }))
       localStorage.setItem("token", JSON.stringify(response.token))
       localStorage.setItem("email", JSON.stringify(response.email))
+      
       navigate("/user/profile")
     } catch (error) {
       console.log("LOGIN API ERROR............", error)

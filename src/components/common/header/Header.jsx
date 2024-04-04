@@ -22,9 +22,6 @@ const Header = () => {
               <Link to='/team'>Internship</Link>
             </li>
             <li>
-              <Link to='/faq'>FAQ's</Link>
-            </li>
-            <li>
               <Link to='/contact'>Contact</Link>
             </li>
             <li>

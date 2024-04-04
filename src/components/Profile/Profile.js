@@ -1,18 +1,30 @@
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
-import { useSelector } from "react-redux"
-// import axios from "axios";
-import { apiConnector } from "../../Services/apiConnectors";
-// import { useNavigate } from "react-router-dom"
+export default function Profile() {
+  const [user, setUser] = useState(null);
+  
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        console.log("Hii from Profile");
+        const email = localStorage.getItem("email");
+        console.log(email);
+        if (!email) {
+          console.error("Email not found in localStorage");
+          return;
+        }
+        
+        const response = await axios.get('http://localhost:4000/api/v2/userdetail/userDetail', { params: { email } });
+        setUser(response.data.user);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
 
-// import { formattedDate } from "../../../utils/dateFormatter"
-// import IconBtn from "../../Common/IconBtn"
-
-export default async function Profile() {
-  // const { user } = useSelector((state) => state.profile)
-  console.log('hii from profile');
-  const {user}= await apiConnector('get','http://localhost:4000/api/v2/userdetail/userDetail');
-  // const navigate = useNavigate()
-console.log(user);
+    fetchUserData();
+  }, []);
 
   return (
     <>
@@ -21,29 +33,17 @@ console.log(user);
       </h1>
       <div className="">
         <div className="">
-          
           <div className="s">
             <p className="">
-              {user.firstName + " " + user.lastName}
+              {user ? user.firstName + " " + user.lastName : ""}
             </p>
             <p className="">{user?.email}</p>
           </div>
         </div>
-        
-          
-        
       </div>
       <div className="">
         <div className="">
           <p className="">About</p>
-          {/* <IconBtn
-            text="Edit"
-            onclick={() => {
-              navigate("/dashboard/settings")
-            }}
-          > */}
-          
-          {/* </IconBtn> */}
         </div>
         <p
           className={`${
@@ -60,14 +60,6 @@ console.log(user);
           <p className="">
             Personal Details
           </p>
-          {/* <IconBtn
-            text="Edit"
-            onclick={() => {
-              navigate("/dashboard/settings")
-            }}
-          >
-           
-          </IconBtn> */}
         </div>
         <div className="flex max-w-[500px] justify-between">
           <div className="flex flex-col gap-y-5">
@@ -105,14 +97,10 @@ console.log(user);
             </div>
             <div>
               <p className="mb-2 text-sm text-richblack-600">Date Of Birth</p>
-              {/* <p className="text-sm font-medium text-richblack-5">
-                {formattedDate(user?.additionalDetails?.dateOfBirth) ??
-                  "Add Date Of Birth"}
-              </p> */}
             </div>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
