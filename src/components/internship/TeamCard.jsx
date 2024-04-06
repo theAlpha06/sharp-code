@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import './team.css'
 
 const TeamCard = () => {
+
   return (
     <>
       {team.map((val) => (
@@ -19,7 +20,7 @@ const TeamCard = () => {
             {/* <Link to="/register"> <button className="btn"  >Apply</button></Link> */}
           </div>
           <div className="button">
-            <button>Apply Now</button>
+            <a href="/register"><button>Apply</button></a>
           </div>
         </div>
         </div>

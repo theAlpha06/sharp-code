@@ -5,12 +5,11 @@ const User = require("../models/User");
 exports.updateProfile=async(req,res)=>{
     try {
         //fetch deta
-        const {gender="", collage="", collageLocation, branch,mobile} = req.body;
+        const {gender="", collage="", collageLocation,course,batch, branch,mobile} = req.body;
         //get userId
         const id = req.user.id;
-
 		// Find the profile by id
-        const userDetails = await User.findById(id);
+        const userDetails = await User.findOne({"email":req.cookies.email})
         const profileDetails = await Profile.findById(userDetails.additionalDetails);
 
         //update profile
@@ -19,6 +18,8 @@ exports.updateProfile=async(req,res)=>{
         profileDetails.mobile = mobile;
         profileDetails.collage = collage;
         profileDetails.collageLocation = collageLocation;
+        profileDetails.course=course;
+        profileDetails.batch=batch;
         profileDetails.branch = branch;
         await profileDetails.save();
 

@@ -1,13 +1,15 @@
 
 .faq .container {
-  width: 70vw;
+  width: 90vw;
   padding-bottom: 1rem;
 }
-.faq .box {
-  background-color: #fff;
-  margin-bottom: 20px;
+.container .box {
+  margin: 2rem;
   border-radius: 20px;
 
+}
+.accordion{
+  background-color: #eee;
 }
 .faq button {
   padding: 0;
@@ -28,4 +30,7 @@
 .faq .accordion:hover {
   background-color: #3491B2;
   color: #fff;
+}
+.data{
+  display: flex;
 }

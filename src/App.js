@@ -14,6 +14,7 @@ import { Toaster } from 'react-hot-toast';
 import SignUp from "./components/Forms/SignUp"
 import Login from "./components/Forms/Login"
 import Profile from "./components/Profile/Profile"
+import Submission from "./components/Forms/submission"
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/register' element={<SignUp />} />
           <Route exact path='/contact' element={<Contact />} />
           <Route path="/user/profile" element={<Profile />} />
+          <Route path="/submission" element={<Submission />} />
         </Routes>
         {/* <Routes>
           <Route exact path='/' element={Home} />

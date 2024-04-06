@@ -125,8 +125,13 @@ exports.signUp = async (req, res) => {
       mobile: "",
       collage: "",
       collageLocation: "",
+      course:"",
+      batch:"",
       branch: "",
       certificate: "",
+      linkedinProfile:"",
+      githubProfile:"",
+      projectData:[],
     });
 
     // Create the user

@@ -8,7 +8,7 @@ import { signUp } from "../../Services/Operations/apiAuth"
 import "./Forms.css";
 import axios from "axios";
 
-export default function SignUp() {
+export default function Submission() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
@@ -90,8 +90,8 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="LinkedIn Profile Link"
-            placeholder="LinkedIn Profile Link"
+            name="firstName"
+            placeholder="First Name"
             value={firstName}
             onChange={handleOnChange}
             required
@@ -102,8 +102,8 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="GitHub Profile Link"
-            placeholder="GitHub Profile Link"
+            name="lastName"
+            placeholder="Last name"
             value={lastName}
             onChange={handleOnChange}
             required
@@ -114,8 +114,8 @@ export default function SignUp() {
 
           <input
             type="text"
-            name="Task1 GitHub Link"
-            placeholder="Task1 GitHub Link"
+            name="email"
+            placeholder="Email"
             value={email}
             onChange={handleOnChange}
             required
@@ -126,58 +126,34 @@ export default function SignUp() {
         <div className="form-control">
 
           <input
-            type="text"
-            name="Task1 LinkedIn Link"
-            placeholder="Task1 LinkedIn Link"
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={password}
+            onChange={handleOnChange}
+            required
+          />
+        </div>
+
+        <div className="form-control">
+
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
             value={confirmPassword}
             onChange={handleOnChange}
             required
           />
         </div>
-        <div className="form-control">
-
-          <input
-            type="text"
-            name="Task2 GitHub Link"
-            placeholder="Task2 GitHub Link"
-            value={email}
-            onChange={handleOnChange}
-            required
-          />
-        </div>
-
 
         <div className="form-control">
 
           <input
             type="text"
-            name="Task2 LinkedIn Link"
-            placeholder="Task2 LinkedIn Link"
-            value={confirmPassword}
-            onChange={handleOnChange}
-            required
-          />
-        </div>
-        <div className="form-control">
-
-          <input
-            type="text"
-            name="Task3 GitHub Link"
-            placeholder="Task3 GitHub Link"
-            value={email}
-            onChange={handleOnChange}
-            required
-          />
-        </div>
-
-
-        <div className="form-control">
-
-          <input
-            type="text"
-            name="Task3 LinkedIn Link"
-            placeholder="Task3 LinkedIn Link"
-            value={confirmPassword}
+            name="domain"
+            placeholder="Domain of Internship"
+            value={domain}
             onChange={handleOnChange}
             required
           />
@@ -188,7 +164,7 @@ export default function SignUp() {
           <label></label>
           <button type="submit" className="primary-btn btn" >Register</button>
         </div> or 
-        <a className="createnewact" href="/submission">  Login?</a>
+        <a className="createnewact" href="/login">  Login?</a>
       </form>
     </div>
   );

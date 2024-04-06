@@ -1,3 +1,8 @@
+.login{
+    background-color: rebeccapurple;
+    background-image: url(../../../public/images/loginbg.jpg);
+    padding:4rem 0;
+}
 .login__container{
     /* width: 50%; */
     display: flex;
@@ -11,7 +16,7 @@
     margin: auto;
     position: relative;
     background-color: white;
-    margin: 2rem auto;
+    padding: 2rem;
     box-shadow: 0 -5px 10px rgb(192, 182, 182);
     
 }

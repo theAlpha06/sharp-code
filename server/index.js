@@ -2,6 +2,7 @@ const express=require("express");
 const app=express();
 
 const userRoutes=require("./routes/User");
+const submissionRoutes=require("./routes/Submission");
 const profileRoutes=require("./routes/Profile");
 const certificateRoutes=require("./routes/Certificate");
 const userDetailRoutes=require("./routes/UserDetail")
@@ -42,6 +43,7 @@ cloudinaryConnect();
 console.log("Hii from index.js");
 //routes
 app.use("/api/v2/auth",userRoutes);
+app.use("/api/v2/submission",submissionRoutes);
 app.use("/api/v2/profile",profileRoutes);
 app.use("/api/v2/certificate",certificateRoutes);
 app.use("/api/v2/userdetail",userDetailRoutes);

@@ -15,11 +15,11 @@ const Hero = () => {
             <p >If you are after a New and Exciting learning Experience that can
               Help you reach your Goals and Unleash your full otential then
               come and be our Intern</p>
-            <div className='button '>
-              <button className="buttonhero">
+            <div className='button ' >
+              <a href="/register" ><button className="buttonhero">
                 GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
-              </button>
-              <button className="" >
+              </button></a>
+              <button  >
                 VIEW COURSE <i className='fa fa-long-arrow-alt-right'></i>
               </button>
             </div>

@@ -6,73 +6,19 @@
     font-weight: 700;
   }
   body {
-    background: #eee;
+    background: #fff;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     color: #000;
     margin: 0;
     padding: 0;
   }
-  
-/*   
-  .swiper-slide {
-    text-align: center;
-    font-size: 1rem;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    overflow-y: hidden;
-  overflow-x: hidden;
-  }
-  
-  .slide-content{
-    width: 30vw;
-    min-width: 500px;
-    border: 2px solid #5090cc;
-  }
-  
-  .swiper {
-    width: 100vw;
-    height: 70vh;
-    margin: 15vh auto;
-  }
-  .append-buttons {
-    text-align: center;
-    margin-top: 3rem;
-  }
-  
-  .append-buttons button {
-    display: flex;
-    cursor: pointer;
-    border: 1px solid #5090cc;
-    color: #5090cc;
-    text-decoration: none;
-    padding: 2rem 5rem;
-    border-radius: 1rem;
-    margin: 0 10px;
-    font-size: 2rem;
-  }
-  .mySwiper{
-    width: 90%;
-  }
-  .swiper__container{
-    width: 100%;
-    overflow-x: hidden;
-  }
-  @media screen and (max-width: 768px){
-    .slide-content{
-      width: 70vw;
-    }
-  } */
 
 .cards__container{
   overflow: scroll;
   width: 100%;
   padding: 2rem 0.5rem;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  scrollbar-width: none;
   
 }
 
@@ -127,6 +73,7 @@
    
 }
 .card__img{
+  border-radius:0 0 50%;
     width: 100%; 
     color: #3491B2;
     /* border-radius: 1rem 1rem  0 0; */

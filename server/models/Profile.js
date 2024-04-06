@@ -1,28 +1,56 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose");
 
 const profileSchema = new mongoose.Schema({
-    gender:{
-        type:String,
-    },
-    collage:{
+    gender: {
         type: String,
+        trim: true
     },
-    collageLocation:{
+    college: {
         type: String,
+        trim: true
     },
-    branch:{
-        type:String,
-     
+    collegeLocation: {
+        type: String,
+        trim: true
     },
-    certificate:{
-        type:String,
-     
+    course: {
+        type: String,
+        trim: true
     },
-    mobile:{
-        type:Number,
-       
+    batch: {
+        type: String,
+        trim: true
     },
-    
+    branch: {
+        type: String,
+        trim: true
+    },
+    certificate: {
+        type: String,
+        trim: true
+    },
+    mobile: {
+        type: Number,
+        trim: true
+    },
+    linkedinProfile: {
+        type: String,
+        trim: true
+    },
+    githubProfile: {
+        type: String,
+        trim: true
+    },
+    projectData: {
+        githubLinks: {
+            type: [String],
+            default: []
+        },
+        linkedinLinks: {
+            type: [String],
+            default: []
+        }
+    }
 });
 
-module.exports=mongoose.model("Profile",profileSchema);
+module.exports = mongoose.model("Profile", profileSchema);
