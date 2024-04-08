@@ -1,216 +1,62 @@
-/* Reset margin for .aboutHomeH */
-.aboutHomeH {
-    margin-top: 0;
-  }
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-item {
+  margin: 3rem;
+  display: flex;
+  gap: 20px;
+}
+
+.about-item-alt .about-item-left {
+  order: 2; /* Change the order for alternating items */
+}
+.recentdata{
+  display: flex;
+}
+.recentdata p{
+  padding: 0 4rem;
+}
+
+
+
+.about-item-left img {
+  max-width: 40vw;
+  height: auto;
+}
+.about-recent-content {
+  background-color: #f7f7f7;
+  padding: 1rem 4rem;
+  display: flex;
   
-  /* Set heading alignment to left and remove padding */
-  .aboutHomeH #heading {
-    text-align: left;
-    padding: 0;
-  }
-  
-  
-  /* Adjust image size and padding in the left section */
-  .aboutHomeH .left img {
-    width: 40vw;
-    height: 100vh;
-    padding-top: 20vh;
-  }
-  
-  /* Add padding to the right section */
-  .aboutHomeH .right {
-    padding: 1rem;
-    padding-bottom: 4rem;
-  }
-  
-  /* Set width and margin for items container */
-  .aboutHomeH .items {
-    width: 55vw;
-    margin-top: 5vh;
-  }
-  
-  /* Style individual items */
-  .aboutHomeH .item {
-    background-color: #fff;
-    margin-top: 1rem;
-    padding: 1rem;
-    transition: 0.5s;
-    box-shadow: -5px -5px 10px rgba(173, 168, 168, 0.568);
-    border-radius: 5%;
-  }
-  
-  /* Adjust image size */
-  .aboutHomeH .img img {
-    width: 5vw;
-    height: 10vh;
-  }
-  
-  /* Set font size for item heading */
-  .aboutHomeH .item h2 {
-    font-size: 2rem;
-  }
-  
-  /* Set font size and color for item description */
-  .aboutHomeH .item p {
-    color: #999999;
-    font-size: 0.9rem;
-  }
-  
-  /* Hover effect for items */
-  .aboutHomeH .item:hover {
-    background-color: #3491b2;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
-  }
-  
-  /* Change color of description on hover */
-  .aboutHomeH .item:hover p {
-    color: #fff;
-  }
-  
-  /* Adjust height of awrapper */
-  .awrapper {
-    background-image: url("../../../public/images/awrapper.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: auto; /* Change height to auto */
-    color: #fff;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Adjust padding for .box inside .awrapper */
-  .awrapper .box {
-    padding: 8vh 0;
-  }
-  
-  /* Set margin for image inside .awrapper */
-  .awrapper img {
-    margin-right: 1vw;
-  }
-  
-  /* Set font size for h1 inside .awrapper */
-  .awrapper h1 {
-    font-size: 50px;
-  }
-  
-  /* Set font size and weight for h3 inside .awrapper */
-  .awrapper h3 {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
-  /* Media queries */
-  @media screen and (max-width: 450px) {
-    .aboutHomeH {
-      padding-top: 40vh;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .aboutHomeH .container {
-      flex-direction: column-reverse;
-    }
-    .aboutHomeH .row {
-      width: 100%;
-    }
-    .aboutHomeH {
-      padding-top: 40vh;
-    }
-    .aboutHomeH .left img {
-      margin-left: 20vw;
-    }
-    
-    .awrapper {
-      height: 50vh;
-    }
-    .awrapper img {
-      height: 4rem;
-      margin-right: 1vw;
-    }
-    .aboutHomeH .right {
-      padding-top: 0;
-    }
-  
-    .item_img {
-      width: 80px;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      display: none;
-    }
-    .item_img > img {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 1000px) {
-    .aboutHomeH .img {
-      width: 25vw;
-    }
-  
-    .aboutHomeH .items {
-      margin-top: 1vh;
-      width: 90vw;
-    }
-  
-    .awrapper h1 {
-      font-size: 25px;
-    }
-    .awrapper img {
-      height: 4rem;
-      margin-right: 1vw;
-    }
-    .aboutHomeH .right {
-      padding-top: 40vh;
-    }
-    .left {
-      display: none;
-    }
-  }
-  
-  @media screen and (max-width: 1200px) {
-    .aboutHomeH .img {
-      width: 25vw;
-    }
-    .aboutHomeH .items {
-      margin-top: 1vh;
-    }
-    .aboutHomeH .right {
-      padding-top: 15vh;
-    }
-  }
-  
-  @media screen and (max-width: 1250px) {
-    .aboutHomeH {
-      padding-top: 20vh;
-    }
-  }
-  
-  @media screen and (max-width: 1350px) {
-    .aboutHomeH {
-      padding-top: 20vh;
-    }
-  }
-  
-  @media screen and (max-width: 1500px) {
-    .aboutHomeH {
-      padding-top: 20vh;
-    }
-  }
-  
-  @media screen and (max-width: 1700px) {
-    .aboutHomeH {
-      padding-top: 20vh;
-    }
-  }
-  
-  @media screen and (max-width: 1900px) {
-    .aboutHomeH {
-      padding-top: 20vh;
-    }
-  }
+  margin-bottom: 20px;
+}
+
+.about-recent-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-recent-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+.about-item-right {
+  flex: 1;
+  margin: 4rem;
+}
+
+.about-item-right h3 {
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
+.about-item-right p {
+  font-size: 16px;
+  line-height: 1.6;
+}

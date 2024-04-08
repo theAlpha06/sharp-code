@@ -18,6 +18,7 @@ import Submission from "./components/Forms/submission"
 import Update from "./components/Forms/Update"
 import TermandCondition from "./components/common/termandcondition"
 import Privacy from "./components/common/privacy"
+import AboutCardHome from "./components/about/aboutcardhome"
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/about' element={<About />} />
+          <Route exact path='/abouthome' element={<AboutCardHome />} />
           <Route exact path='/courses' element={<CourseHome />} />
           <Route exact path='/team' element={<Team />} />
           <Route exact path='/faq' element={<Faq />} />
