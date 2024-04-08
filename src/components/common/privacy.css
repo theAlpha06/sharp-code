@@ -1,0 +1,81 @@
+.termsection {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  header h2{
+    text-align: center;
+    padding-top: 3rem ;
+  }
+  
+  .termcontainer {
+    max-width: 90vw;
+    margin: 3rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .termcontainer header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .termcontainer h2 {
+    font-size: 24px;
+    padding-top: 4rem;
+    margin: 2rem 0;
+  }
+  
+  .termcontainer h3 {
+    font-size: 20px;
+    padding-top: 4rem;
+    margin: 2rem 0;
+    color: #3491B2;
+  }
+  
+  .termcontainer p {
+    margin-bottom: 15px;
+  }
+  
+  .termcontainer ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .termcontainer ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+  }
+  
+  .termcontainer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .termcontainer a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .termcontainer {
+      padding: 10px;
+    }
+  
+    .termcontainer h2 {
+      font-size: 20px;
+    }
+  
+    .termcontainer h3 {
+      font-size: 18px;
+    }
+  
+    .termcontainer p {
+      font-size: 14px;
+    }
+  }
+  

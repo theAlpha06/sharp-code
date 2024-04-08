@@ -16,6 +16,8 @@ import Login from "./components/Forms/Login"
 import Profile from "./components/Profile/Profile"
 import Submission from "./components/Forms/submission"
 import Update from "./components/Forms/Update"
+import TermandCondition from "./components/common/termandcondition"
+import Privacy from "./components/common/privacy"
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
           <Route path="/user/profile" element={<Profile />} />
           <Route path="/submission" element={<Submission />} />
           <Route path="/update" element={<Update />} />
+          <Route path="/termandcondition" element={<TermandCondition />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
         {/* <Routes>
           <Route exact path='/' element={Home} />

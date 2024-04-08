@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import "./privacy.css"
 
 export default function Termandcondition() {
   return (
-    <div>
-      <h2><strong>Terms and Conditions</strong></h2>
+    <div className="termsection">
+      <header>
+        <h2><strong>Terms and Conditions</strong></h2>
+      </header>
+
+      <section className=" termcontainer">
+        <p><strong>Welcome to Sharpcode!</strong></p>
+
+        <p>These terms and conditions outline the rules and regulations for the use of Sharpcode's Website, located at www.sharpcode.in.</p>
+
+        <h2><strong>Terms and Conditions</strong></h2>
 
 <p>Welcome to Sharpcode!</p>
 
@@ -122,6 +132,11 @@ export default function Termandcondition() {
 <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
 
 <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
+      </section>
+
     </div>
-  )
+  );
 }
+
+
+
