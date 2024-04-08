@@ -1,7 +1,9 @@
 .login{
-    background-color: rebeccapurple;
-    background-image: url(../../../public/images/loginbg.jpg);
-    padding:4rem 0;
+    background-image: url(/public/images/bg8.png);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 100vw;
+    padding: 2rem 0;
 }
 .login__container{
     /* width: 50%; */
@@ -20,6 +22,7 @@
     box-shadow: 0 -5px 10px rgb(192, 182, 182);
     
 }
+
 .createnewact{
     color: black;
     font-size: 12px;
@@ -79,3 +82,37 @@ textarea:focus, input:focus{
         width: 90%;
     }
 }
+
+
+/* Add this CSS to your existing Forms.css file or create a new CSS file */
+
+  
+  .form-control select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #5090cc;
+    /* border-radius: 4px; */
+    box-sizing: border-box;
+    appearance: none;
+  }
+  
+  .form-control select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Adjust styles for options if needed */
+  .form-control select option {
+    font-size: 16px;
+  }
+  
+  /* Optional: Style for the label */
+  .form-control label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  

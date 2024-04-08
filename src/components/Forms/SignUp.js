@@ -83,6 +83,7 @@ export default function Submission() {
   }
 
   return (
+    <div className="login">
     <div className="login__container">
       <h1 className="title">Register</h1>
       <form onSubmit={handleOnSubmit} method="POST" className="form__box">
@@ -166,6 +167,7 @@ export default function Submission() {
         </div> or 
         <a className="createnewact" href="/login">  Login?</a>
       </form>
+    </div>
     </div>
   );
 }

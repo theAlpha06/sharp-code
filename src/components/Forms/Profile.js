@@ -59,6 +59,7 @@ export default function Profile() {
     }
 
     return (
+        <div className="login">
         <div className="login__container">
             <h1>Complete Your Profile</h1>
             <form onSubmit={handleOnSubmit} className="form__box">
@@ -123,6 +124,7 @@ export default function Profile() {
                     <button type="submit" className="primary-btn">Update</button>
                 </div>
             </form>
+        </div>
         </div>
     );
 }

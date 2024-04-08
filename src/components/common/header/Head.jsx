@@ -5,11 +5,11 @@ const Head = () => {
     <>
       <section className='head'>
         <div className='container flexSB'>
-        <img
+        <a href="/"><img
             style={{ height: "5rem" }}
             src="./images/logo/bg7.png"
             alt="error"
-          />
+          /></a>
           <div className="logo">
               <h1>SHARP-CODE</h1>
               <span>ONLINE EDUCATION & LEARNING</span>

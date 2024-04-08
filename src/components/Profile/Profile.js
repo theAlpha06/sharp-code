@@ -32,6 +32,10 @@ export default function Profile() {
 
   return (
     <div className="profile-container">
+      <div className="buttons">
+          <a href="/update"><button>Update Your details</button></a>
+          <a href="/submission"><button>Submit Your Project</button></a>
+        </div>
       <div className="profile-heading">
         <h1 className="profile-title">My Profile</h1>
         <img
@@ -41,6 +45,7 @@ export default function Profile() {
         />
       </div>
       <hr />
+      
       <div className="profile-section">
         <div className="profile-subsection">
           <p className="profile-text">
@@ -138,11 +143,6 @@ export default function Profile() {
             {/* Add more LinkedIn task links as needed */}
           </div>
         </div>
-        <div className="buttons">
-          <a href="/submission"><button>Update Your details</button></a>
-          <a href="/submission"><button>Submit Your Project</button></a>
-        </div>
-
       </div>
     </div>
   );

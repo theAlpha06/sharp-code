@@ -85,8 +85,9 @@ export default function SignUp() {
   }
 
   return (
+    <div className="login">
     <div className="login__container">
-      <h1 className="title">Register</h1>
+      <h1 className="title">Task Submission</h1>
       <form onSubmit={handleOnSubmit} method="POST" className="form__box">
         <div className="form-control">
 
@@ -188,10 +189,11 @@ export default function SignUp() {
 
         <div className="form-control ">
           <label></label>
-          <button type="submit" className="primary-btn btn" >Register</button>
+          <button type="submit" className="primary-btn btn" >Submit</button>
         </div> or 
-        <a className="createnewact" href="/submission">  Login?</a>
+        <a className="createnewact" href="/login">  Login?</a>
       </form>
+    </div>
     </div>
   );
 }

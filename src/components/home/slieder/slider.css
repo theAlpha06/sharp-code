@@ -93,11 +93,13 @@
     color: white;
     color: #10b7d9;
 } */
+
 .btn{
     padding: 0.6rem 1rem;
     border-radius: 0.5rem;
     border: 1px solid #3491B2;
     background-color: white;
+    bottom: 0;
     font-weight: 600;
     font-size: 0.8rem;
     margin: 0.5rem 0;

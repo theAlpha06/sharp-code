@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footer__container">
       <footer>
-        <div className='container padding'>
+        <div className='container '>
           <div className='box logo'>
             <h1>SHARP-CODE</h1>
             <span>ONLINE EDUCATION & LEARNING</span>
@@ -20,22 +20,32 @@ const Footer = () => {
 
           <div className='box link'>
             <h3>Explore</h3>
-            <hr />
             <ul>
-              <li>About Us</li>
-              <li>Internship</li>
-              <li>FAQ</li>
-              <li>Login</li>
-              <li>Registration</li>
+              <a href="/about"><li>About Us</li></a>
+              <a href="/team"><li>Internship</li></a>
+              <a href="/faq"><li>FAQ</li></a>
+              <a href="/login"><li>Login</li></a>
+              <a href="/register"><li>Registration</li></a>
             </ul>
           </div>
           <div className='box link'>
             <h3>Quick Links</h3>
-            <hr />
             <ul>
-              <li>Contact Us</li>
-              <li><i className='fa fa-mobile'></i> +91-1234567809</li>
-              <li><i className='fa fa-home'></i>  Har jagah ham hi hai jaha dekhna vahi mil lena</li>
+              <a href="/contact"><li> <i className="fa fa-phone-square"></i> Contact Us</li></a>
+              <li><i className='fa fa-envelope'></i>  abc@gmail.com</li>
+              <a href="/update"><li>Update Details</li></a>
+              <a href="/submission"><li>Task Submission</li></a>
+
+            </ul>
+          </div>
+          <div className='box link'>
+            <h3>Quick Links</h3>
+            <ul>
+              <a href="/contact"><li> <i className="fa fa-phone-square"></i> Contact Us</li></a>
+              <li><i className='fa fa-envelope'></i>  abc@gmail.com</li>
+              <a href="/update"><li>Update Details</li></a>
+              <a href="/submission"><li>Task Submission</li></a>
+
             </ul>
           </div>
         </div>
@@ -44,12 +54,6 @@ const Footer = () => {
         <p>
           Copyright ©2022 All rights reserved
         </p>
-      <hr/>
-      <div className="lastline">
-        <a href="privacy">Privacy</a>
-        <a href="Terms&conditions">Terms & Conditions</a>
-        <a href="Feedbacks">Feedbacks</a>
-      </div>
       </div>
     </div>
   )

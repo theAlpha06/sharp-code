@@ -12,7 +12,6 @@
   padding-right: 50px;
   color: #fff;
 }
-
 .hero h1 {
   position: relative;
   font-size: 2rem;
@@ -75,6 +74,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .margin{
+    margin-bottom: 20vh;
+  }
   .hero h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -92,7 +94,9 @@
 }
 
 @media screen and (max-width: 900px) {
-
+  .margin{
+    margin-bottom: 20vh;
+  }
   .hero .row {
     width: 100%;
     padding-right: 0px;
@@ -104,6 +108,9 @@
 }
 
 @media screen and (max-width: 450px) {
+  .margin{
+    margin-bottom: 20vh;
+  }
   .row {
     padding-top: 6rem;
   }
@@ -123,6 +130,7 @@
   white-space: nowrap;
   overflow: hidden;
   transform: translateY(-50%);
+
 }
 
 /* Animation */

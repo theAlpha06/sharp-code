@@ -127,7 +127,7 @@ export function login(email, password, navigate) {
       localStorage.setItem("token", JSON.stringify(response.token))
       localStorage.setItem("email", JSON.stringify(response.email))
       
-      navigate("/user/profile")
+      navigate("/")
     } catch (error) {
       console.log("LOGIN API ERROR............", error)
       toast.error("Login Failed ")
