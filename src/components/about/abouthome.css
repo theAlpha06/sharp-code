@@ -26,6 +26,14 @@
   max-width: 40vw;
   height: auto;
 }
+
+.ourmission{
+  padding: 3rem;
+}
+.ourmission h3{
+  padding-bottom: 2rem;
+}
+
 .about-recent-content {
   background-color: #f7f7f7;
   padding: 1rem 4rem;

@@ -1,7 +1,7 @@
 /*--------head------------*/
 .head {
   padding-left: 2rem;
-  background-color: #eee;
+  background-color: #fff;
   color: black;
 }
 .logo h1 {
@@ -16,7 +16,7 @@
 /*--------head------------*/
 /*--------header------------*/
 header {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #eee;
   margin: 0;
   z-index: 10;
 }
@@ -24,7 +24,7 @@ header.sticky {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #eee;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
