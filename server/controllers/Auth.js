@@ -44,19 +44,15 @@ exports.login = async (req, res) => {
         expiresIn: "24h",
       });
       
-      // set cookies
-      res.cookie("token", token, {
-        maxAge: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
-        httpOnly: true,
-      });
-      
-      res.cookie("email", email, {
-        maxAge: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
-        httpOnly: true,
-      });
 
-      // Send success response
-      return res.status(200).json({
+      return res
+      .status(202)
+      .cookie('Name', 'Shubham Singh', {
+        sameSite: 'strict',
+        path: '/',
+        expires: new Date(new Date().getTime() + 100 * 1000),
+              httpOnly: true,
+      }).json({
         success: true,
         token,
         email,
