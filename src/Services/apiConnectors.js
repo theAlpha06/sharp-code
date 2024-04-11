@@ -1,4 +1,5 @@
 import axios from "axios";
+axios.defaults.withCredentials = true;
 
 export const apiConnector = async (method, url, data = null) => {
   try {
@@ -8,6 +9,8 @@ export const apiConnector = async (method, url, data = null) => {
       method: method,
       url: url,
       data: data,
+    },{
+      withCredentials: true,
     });
     console.log("hi2 from apiconnector");
     return response.data;

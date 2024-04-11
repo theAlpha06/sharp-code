@@ -7,6 +7,7 @@ import { signUp } from "../../Services/Operations/apiAuth"
 // import axios from "axios";
 import "./Forms.css";
 import axios from "axios";
+import { apiConnector } from "../../Services/apiConnectors";
 
 export default function SignUp() {
   const navigate = useNavigate()
@@ -44,8 +45,7 @@ export default function SignUp() {
       ...formData,
     }
     try{
-    // dispatch(setSignupData(signupData))
-    dispatch(signUp(
+      const response = await apiConnector("POST", 'http://localhost:4000/api/v2/submission', {
       LinkedIn_Profile_Link,
       GitHub_Profile_Link,
       Task1_GitHub_Link,
@@ -54,8 +54,21 @@ export default function SignUp() {
       Task1_LinkedIn_Link,
       Task2_LinkedIn_Link,
       Task3_LinkedIn_Link,
-      navigate
-      ))
+        
+      });
+      console.log(response)
+    // dispatch(setSignupData(signupData))
+    // dispatch(signUp(
+    //   LinkedIn_Profile_Link,
+    //   GitHub_Profile_Link,
+    //   Task1_GitHub_Link,
+    //   Task2_GitHub_Link,
+    //   Task3_GitHub_Link,
+    //   Task1_LinkedIn_Link,
+    //   Task2_LinkedIn_Link,
+    //   Task3_LinkedIn_Link,
+    //   navigate
+    //   ))
     // const response=axios.post('http://localhost:4000/api/v2/auth/signup',{firstName,lastName,email,password,confirmPassword,domain})
     // console.log(response);
     }
