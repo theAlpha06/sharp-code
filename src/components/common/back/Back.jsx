@@ -1,4 +1,5 @@
 import React from "react"
+import "./back.css"
 // import { useLocation } from "react-router-dom"
 
 const Back = ({ title }) => {

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"
 
 
 const Footer = () => {
+  const date = new Date()
+  const copyrightYear = date.getFullYear();
   return (
     <div className="footer__container">
       <footer>
@@ -53,7 +55,7 @@ const Footer = () => {
       </footer>
       <div className='legal'>
         <p>
-          Copyright ©2022 All rights reserved
+          Copyright ©{copyrightYear} All rights reserved
         </p>
       </div>
     </div>

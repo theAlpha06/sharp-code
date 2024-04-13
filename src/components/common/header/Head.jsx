@@ -1,15 +1,15 @@
 import React from "react"
-
+import { Link } from "react-router-dom"
 const Head = () => {
   return (
     <>
       <section className='head'>
         <div className='container flexSB'>
-        <a href="/"><img
-            style={{ height: "5rem" }}
-            src="./images/logo/bg7.png"
+        <Link to="/"><img
+            style={{ height: "4rem" }}
+            src="./images/logo/logo.png"
             alt="error"
-          /></a>
+          /></Link>
           <div className="logo">
               <h1>SHARP-CODE</h1>
               <span>ONLINE EDUCATION & LEARNING</span>

@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Head from "./Head";
 import "./header.css";
+import { apiConnector } from "../../../Services/apiConnectors";
+import { endpoints } from "../../../Services/apis";
+const {
+  LOGOUT_API,
+}= endpoints;
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -10,13 +15,11 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  // Function to check if user is logged in
   useEffect(() => {
     checkLoggedIn();
   });
   const checkLoggedIn = () => {
     const token = localStorage.getItem("token");
-    console.log("token ==>", token);
     if (token) {
       return setIsLoggedIn(true);
     } else {
@@ -24,12 +27,23 @@ const Header = () => {
     }
   };
 
-  // Function to handle user logout
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    setIsLoggedIn(false);
-    navigate('/')
+  const handleLogout = async () => {
+    try {
+      const response = await apiConnector("POST",LOGOUT_API)
+
+      if (response.data.success) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("email");
+        setIsLoggedIn(false);
+        navigate('/');
+      } else {
+        console.error('Logout failed');
+      }
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   };
+  
 
 
   const changeHeaderOnScroll = () => {

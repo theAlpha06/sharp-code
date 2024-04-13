@@ -2,7 +2,6 @@ import { apiConnector } from "../apiConnectors"
 import { toast } from "react-hot-toast"
 import { endpoints } from "../apis"
 import { setLoading} from "../../slices/authSlice"
-// import { setUser } from "../../slices/profileSlice"
 
 
 const {
@@ -51,7 +50,7 @@ export function profile(token,
 
             console.log("PROFILE API RESPONSE............", response)
 
-            if (!response.success) {
+            if (response.status!=200) {
                 throw new Error(response.message)
             }
             toast.success("Profile update Successful")

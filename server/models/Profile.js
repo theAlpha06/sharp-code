@@ -5,11 +5,11 @@ const profileSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    college: {
+    collage: {
         type: String,
         trim: true
     },
-    collegeLocation: {
+    collageLocation: {
         type: String,
         trim: true
     },
@@ -30,7 +30,7 @@ const profileSchema = new mongoose.Schema({
         trim: true
     },
     mobile: {
-        type: Number,
+        type: String,
         trim: true
     },
     linkedinProfile: {

@@ -6,7 +6,7 @@ export default function AboutCardHome() {
     <div className="about-section">
       {/* Section 1 */}
       
-      <div className="about-item">
+      <div className="ourmission-main">
         <div className="ourmission">
           <h3>Our Mission</h3>
           <p>

@@ -4,9 +4,7 @@ import { toast } from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
 import { setSignupData } from "../../slices/authSlice";
 import { signUp } from "../../Services/Operations/apiAuth"
-// import axios from "axios";
 import "./Forms.css";
-import axios from "axios";
 
 export default function Submission() {
   const navigate = useNavigate()
@@ -26,7 +24,6 @@ export default function Submission() {
 
   const { firstName, lastName, email, password, confirmPassword, domain } = formData
 
-  // Handle input fields, when some value changes
   const handleOnChange = (e) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -34,7 +31,6 @@ export default function Submission() {
     }))
   }
 
-  // Handle Form Submission
   const handleOnSubmit = async(e) => {
     e.preventDefault()
 
@@ -42,7 +38,6 @@ export default function Submission() {
       toast.error("Passwords Do Not Match")
       return
     }
-    console.log(firstName,lastName,email,password,confirmPassword,domain);
     const signupData = {
       ...formData,
     }
@@ -56,21 +51,11 @@ export default function Submission() {
       domain,
       navigate
       ))
-    // const response=axios.post('http://localhost:4000/api/v2/auth/signup',{firstName,lastName,email,password,confirmPassword,domain})
-    // console.log(response);
     }
     catch(err){
       toast.error("there is some error bhai>>",err.response.data.message);
     }
 
-    // try{
-    // let resp = await axios.post('/about',{firstName,lastName,email,password,confirmPassword,domain});
-    // // Reset
-    // }
-    // catch(err){
-    //   toast.error("there is some error bhai>>",err.response.data.message);
-    // }
-    console.log(firstName,lastName,email,password,confirmPassword,domain);
     setFormData({
       firstName: "",
       lastName: "",

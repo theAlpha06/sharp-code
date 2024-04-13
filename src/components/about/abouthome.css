@@ -2,13 +2,20 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 3rem;
 }
 
 .about-item {
-  margin: 3rem;
+  margin: 0 3rem;
   display: flex;
   gap: 20px;
 }
+.ourmission-main{
+
+  background-color: #A4D9EB;
+  padding: 3rem;
+}
+
 
 .about-item-alt .about-item-left {
   order: 2; /* Change the order for alternating items */
@@ -17,6 +24,7 @@
   display: flex;
 }
 .recentdata p{
+  font-weight: 400;
   padding: 0 4rem;
 }
 
@@ -26,7 +34,6 @@
   max-width: 40vw;
   height: auto;
 }
-
 .ourmission{
   padding: 3rem;
 }
@@ -39,7 +46,7 @@
   padding: 1rem 4rem;
   display: flex;
   
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .about-recent-content h2 {

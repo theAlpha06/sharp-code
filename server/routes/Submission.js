@@ -1,10 +1,10 @@
 const express = require("express")
 const router = express.Router();
-console.log("hii from submissionRouter")
+const {auth}=require("../middlewares/auth")
 const { 
     submission,
 } = require("../controllers/submission");
 // Route for user login
-router.post("/", submission)
+router.post("/",auth, submission)
 
 module.exports = router

@@ -20,7 +20,7 @@ dbConnect();
 
 app.use(
   cors({
-    origin: "http://localhost:3001",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
@@ -39,7 +39,6 @@ app.use(
 //cloudinar connection
 cloudinaryConnect();
 
-console.log("Hii from index.js");
 //routes
 app.use("/api/v2/auth", userRoutes);
 app.use("/api/v2/submission", submissionRoutes);

@@ -1,20 +1,19 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux"
 import { toast } from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
-import { setSignupData } from "../../slices/authSlice";
-import { signUp } from "../../Services/Operations/apiAuth"
-// import axios from "axios";
 import "./Forms.css";
-import axios from "axios";
 import { apiConnector } from "../../Services/apiConnectors";
+import { endpoints } from "../../Services/apis";
 
-export default function SignUp() {
+const {
+  SUBMISSION_API
+} = endpoints;
+
+export default function Submission() {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({
-    LinkedIn_Profile_Link: "https://www.linkedin.com/in/anuj-dubey-370010231/",
+    LinkedIn_Profile_Link: "",
     GitHub_Profile_Link: "",
     Task1_GitHub_Link: "",
     Task2_GitHub_Link: "",
@@ -29,7 +28,6 @@ export default function SignUp() {
 
   const { LinkedIn_Profile_Link, GitHub_Profile_Link, Task1_GitHub_Link,Task2_GitHub_Link,Task3_GitHub_Link,Task3_LinkedIn_Link,Task2_LinkedIn_Link,Task1_LinkedIn_Link } = formData
 
-  // Handle input fields, when some value changes
   const handleOnChange = (e) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -37,15 +35,13 @@ export default function SignUp() {
     }))
   }
 
-  // Handle Form Submission
   const handleOnSubmit = async(e) => {
     e.preventDefault()
-    // console.log(LinkedIn_Profile_Link,GitHub_Profile_Link,email,password,confirmPassword,domain);
     const signupData = {
       ...formData,
     }
     try{
-      const response = await apiConnector("POST", 'http://localhost:4000/api/v2/submission', {
+      const response = await apiConnector("POST", SUBMISSION_API, {
       LinkedIn_Profile_Link,
       GitHub_Profile_Link,
       Task1_GitHub_Link,
@@ -56,34 +52,12 @@ export default function SignUp() {
       Task3_LinkedIn_Link,
         
       });
-      console.log(response)
-    // dispatch(setSignupData(signupData))
-    // dispatch(signUp(
-    //   LinkedIn_Profile_Link,
-    //   GitHub_Profile_Link,
-    //   Task1_GitHub_Link,
-    //   Task2_GitHub_Link,
-    //   Task3_GitHub_Link,
-    //   Task1_LinkedIn_Link,
-    //   Task2_LinkedIn_Link,
-    //   Task3_LinkedIn_Link,
-    //   navigate
-    //   ))
-    // const response=axios.post('http://localhost:4000/api/v2/auth/signup',{firstName,lastName,email,password,confirmPassword,domain})
-    // console.log(response);
+      navigate('/user/profile');
     }
     catch(err){
       toast.error("there is some error bhai>>",err.response.data.message);
     }
 
-    // try{
-    // let resp = await axios.post('/about',{firstName,lastName,email,password,confirmPassword,domain});
-    // // Reset
-    // }
-    // catch(err){
-    //   toast.error("there is some error bhai>>",err.response.data.message);
-    // }
-    console.log(LinkedIn_Profile_Link,GitHub_Profile_Link,Task1_GitHub_Link,Task2_GitHub_Link,Task3_GitHub_Link,Task1_LinkedIn_Link,Task2_LinkedIn_Link,Task3_LinkedIn_Link);
     setFormData({
       LinkedIn_Profile_Link: "",
       GitHub_Profile_Link: "",
