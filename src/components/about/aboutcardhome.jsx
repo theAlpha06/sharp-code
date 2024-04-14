@@ -1,6 +1,5 @@
 import React from 'react';
 import './abouthome.css'; // You can create this CSS file for styling
-
 export default function AboutCardHome() {
   return (
     <div className="about-section">
@@ -36,7 +35,7 @@ export default function AboutCardHome() {
       {/* Section 2 */}
       <div className="about-item about-item-alt">
         <div className="about-item-left">
-          <img src={process.env.PUBLIC_URL + '/images/bg.jpeg'} alt="Image 2" />
+          <img src={process.env.PUBLIC_URL + '/images/logo/ourstory.jpg'} alt="Image 2" />
         </div>
         <div className="about-item-right">
           <h3>Our story</h3>
@@ -52,7 +51,7 @@ export default function AboutCardHome() {
       {/* Section 3 */}
       <div className="about-item">
         <div className="about-item-left">
-          <img src={process.env.PUBLIC_URL + '/images/bg.jpeg'} alt="Image 3" />
+          <img src={process.env.PUBLIC_URL + '/images/logo/stuani.jpg'} alt="Image 3" />
         </div>
         <div className="about-item-right">
           <h3>Students First</h3>
