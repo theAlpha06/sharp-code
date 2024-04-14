@@ -21,7 +21,7 @@ const AboutCard = () => {
             {homeAbout.map((val, index) => {
               if (index % 2 === 0) {
                 return (
-                  <div className="item flexSB" data-aos="fade-up">
+                  <div className="item flexSB" data-aos="fade-up" key={index}>
                     <div className="img item_img">
                       <img src={val.cover} alt="" />
                     </div>
@@ -39,7 +39,7 @@ const AboutCard = () => {
             {homeAbout.map((val, index) => {
               if (index % 2 !== 0) {
                 return (
-                  <div className="item flexSB" data-aos="fade-up">
+                  <div className="item flexSB" data-aos="fade-up" key={index}>
                     <div className="img item_img">
                       <img src={val.cover} alt="" />
                     </div>

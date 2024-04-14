@@ -5,7 +5,7 @@ import { endpoints } from "../../Services/apis";
 import { Link } from "react-router-dom";
 
 const {
-  UPDATE_API,
+  PROFILE_API,
 }=endpoints;
 
 export default function Profile() {
@@ -14,7 +14,7 @@ export default function Profile() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response= await apiConnector("GET",UPDATE_API);
+        const response= await apiConnector("GET",PROFILE_API);
         setUser(response.data.data);
       } catch (error) {
         console.error("Error fetching user data:", error);
@@ -38,8 +38,7 @@ export default function Profile() {
           alt="Profile Image"
         />
       </div>
-      <hr />
-      
+      <hr/>
       <div className="profile-section">
         <div className="profile-subsection">
           <p className="profile-text">
@@ -48,7 +47,7 @@ export default function Profile() {
           <p className="profile-text">{user?.email}</p>
         </div>
       </div>
-      <div className="profile-section">
+      {/* <div className="profile-section">
         <div className="profile-subsection">
           <p className="profile-subtitle">About</p>
           <p
@@ -61,7 +60,7 @@ export default function Profile() {
             {user?.additionalDetails?.about ?? "Write Something About Yourself"}
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="profile-section">
         <div className="profile-subsection">
           <p className="profile-subtitle">Personal Details</p>
@@ -119,7 +118,7 @@ export default function Profile() {
             <p className="profile-detail-label">Collage Details</p>
             <p className="profile-detail-value">Collage Name : {user?.additionalDetails?.collage ?? "N/A"}</p>
             <p className="profile-detail-value">Collage Location : {user?.additionalDetails?.collageLocation ?? "N/A"}</p>
-            <p className="profile-detail-value">Course : {user?.additionalDetails?.course ?? "N/A"}</p>
+            <p className="profile-detail-value">Course : {user?.additionalDetails?.branch ?? "N/A"}</p>
             <p className="profile-detail-value">Batch : {user?.additionalDetails?.batch ?? "N/A"}</p>
           </div>
         </div>

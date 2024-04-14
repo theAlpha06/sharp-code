@@ -1,11 +1,11 @@
 /* Profile Container */
 .profile-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 4rem auto;
     padding: 20px;
     background-color: #f5f5f5;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
   }
   
@@ -19,12 +19,14 @@
       transform: translateY(0);
     }
   }
-  
+  .profile-detail p{
+    margin-bottom: 0px;
+  }
   /* Profile Title */
   .profile-title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     color: #333;
   }
   .profile-heading{
