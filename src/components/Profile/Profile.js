@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import axios from "axios";
 import "./Profile.css";
+import { apiConnector } from "../../Services/apiConnectors";
+import { endpoints } from "../../Services/apis";
+import { Link } from "react-router-dom";
+
+const {
+  PROFILE_API,
+}=endpoints;
 
 export default function Profile() {
   const [user, setUser] = useState(null);
@@ -9,19 +14,8 @@ export default function Profile() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        console.log("Hii from Profile");
-        const email = localStorage.getItem("email");
-        console.log(email);
-        if (!email) {
-          console.error("Email not found in localStorage");
-          return;
-        }
-
-        const response = await axios.get(
-          "http://localhost:4000/api/v2/userdetail/userDetail",
-          { params: { email } }
-        );
-        setUser(response.data.user);
+        const response= await apiConnector("GET",PROFILE_API);
+        setUser(response.data.data);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
@@ -33,8 +27,8 @@ export default function Profile() {
   return (
     <div className="profile-container">
       <div className="buttons">
-          <a href="/update"><button>Update Your details</button></a>
-          <a href="/submission"><button>Submit Your Project</button></a>
+          <Link to="/update"><button>Update Your details</button></Link>
+          <Link to="/submission"><button>Submit Your Project</button></Link>
         </div>
       <div className="profile-heading">
         <h1 className="profile-title">My Profile</h1>
@@ -44,8 +38,7 @@ export default function Profile() {
           alt="Profile Image"
         />
       </div>
-      <hr />
-      
+      <hr/>
       <div className="profile-section">
         <div className="profile-subsection">
           <p className="profile-text">
@@ -54,7 +47,7 @@ export default function Profile() {
           <p className="profile-text">{user?.email}</p>
         </div>
       </div>
-      <div className="profile-section">
+      {/* <div className="profile-section">
         <div className="profile-subsection">
           <p className="profile-subtitle">About</p>
           <p
@@ -67,7 +60,7 @@ export default function Profile() {
             {user?.additionalDetails?.about ?? "Write Something About Yourself"}
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="profile-section">
         <div className="profile-subsection">
           <p className="profile-subtitle">Personal Details</p>
@@ -100,7 +93,7 @@ export default function Profile() {
           <div className="profile-detail">
             <p className="profile-detail-label">Phone Number</p>
             <p className="profile-detail-value">
-              {user?.additionalDetails?.contactNumber ?? "Add Contact Number"}
+              {user?.additionalDetails?.mobile ?? "Add Contact Number"}
             </p>
           </div>
           <div className="profile-detail">
@@ -111,35 +104,35 @@ export default function Profile() {
         <div className="profile-details-container">
           <div className="profile-detail">
             <p className="profile-detail-label">LinkedIn Id</p>
-            <p className="profile-detail-value">{user?.email ?? "N/A"}</p>
+            <p className="profile-detail-value"><a href={user?.additionalDetails?.linkedinProfile ?? "N/A"}>{user?.additionalDetails?.linkedinProfile ?? "N/A"}</a></p>
           </div>
           <div className="profile-detail">
             <p className="profile-detail-label">GitHub Id</p>
-            <p className="profile-detail-value">
-              {user?.additionalDetails?.contactNumber ?? "Add Contact Number"}
+            <p className="profile-detail-value"><a href={user?.additionalDetails?.githubProfile ?? "/"}>
+              {user?.additionalDetails?.githubProfile ?? "Add Contact Number"}</a>
             </p>
           </div>
         </div>
         <div className="profile-details-container">
           <div className="profile-detail">
             <p className="profile-detail-label">Collage Details</p>
-            <p className="profile-detail-value">Collage Name</p>
-            <p className="profile-detail-value">Collage Location</p>
-            <p className="profile-detail-value">Course</p>
-            <p className="profile-detail-value">Batch</p>
+            <p className="profile-detail-value">Collage Name : {user?.additionalDetails?.collage ?? "N/A"}</p>
+            <p className="profile-detail-value">Collage Location : {user?.additionalDetails?.collageLocation ?? "N/A"}</p>
+            <p className="profile-detail-value">Course : {user?.additionalDetails?.branch ?? "N/A"}</p>
+            <p className="profile-detail-value">Batch : {user?.additionalDetails?.batch ?? "N/A"}</p>
           </div>
         </div>
         <div className="profile-details-container">
           <div className="profile-detail">
             <p className="profile-detail-label">GitHub Task Links</p>
-            <p className="profile-detail-value">Link 1</p>
-            <p className="profile-detail-value">Link 2</p>
+            <p className="profile-detail-value">Link 1 :   {user?.additionalDetails?.projectData?.githubLinks[0] ?? "N/A"}</p>
+            <p className="profile-detail-value">Link 2 :  {user?.additionalDetails?.projectData?.githubLinks[1] ?? "N/A"}</p>
             {/* Add more GitHub task links as needed */}
           </div>
           <div className="profile-detail">
             <p className="profile-detail-label">LinkedIn Task Link</p>
-            <p className="profile-detail-value">Link 1</p>
-            <p className="profile-detail-value">Link 2</p>
+            <p className="profile-detail-value">Link 1 :  {user?.additionalDetails?.projectData?.linkedinLinks[0] ?? "N/A"}</p>
+            <p className="profile-detail-value">Link 2 :  {user?.additionalDetails?.projectData?.linkedinLinks[1] ?? "N/A"}</p>
             {/* Add more LinkedIn task links as needed */}
           </div>
         </div>

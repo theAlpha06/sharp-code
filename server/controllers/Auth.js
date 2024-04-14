@@ -11,7 +11,6 @@ dotenv.config();
 exports.login = async (req, res) => {
   try {
     // fetch data from req body
-    console.log(req.body);
     const { email, password } = req.body;
 
     // validate data
@@ -44,7 +43,6 @@ exports.login = async (req, res) => {
         expiresIn: "24h",
       });
       
-      // set cookies
       res.cookie("token", token, {
         maxAge: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
         httpOnly: true,
@@ -54,8 +52,6 @@ exports.login = async (req, res) => {
         maxAge: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
         httpOnly: true,
       });
-
-      // Send success response
       return res.status(200).json({
         success: true,
         token,
@@ -70,7 +66,6 @@ exports.login = async (req, res) => {
       });
     }
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       success: false,
       message: 'Login Failure, please try again',
@@ -122,10 +117,10 @@ exports.signUp = async (req, res) => {
     // Create profile details
     const profileDetails = await Profile.create({
       gender: "",
-      mobile: "",
       collage: "",
       collageLocation: "",
       course:"",
+      mobile:"",
       batch:"",
       branch: "",
       certificate: "",
@@ -150,10 +145,19 @@ exports.signUp = async (req, res) => {
       user,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       success: false,
       message: "User cannot be registered. Please try again",
     });
   }
 };
+
+
+exports.logout=async(req,res)=>{
+  res.clearCookie('token', { path: '/' });
+
+  // Clear "email" cookie
+  res.clearCookie('email', { path: '/' });
+
+  return res.status(200).json({ success: true, message: 'Logged out successfully' });
+}

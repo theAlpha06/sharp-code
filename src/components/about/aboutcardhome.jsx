@@ -5,8 +5,13 @@ export default function AboutCardHome() {
   return (
     <div className="about-section">
       {/* Section 1 */}
+<<<<<<< HEAD
 
       <div className="about-item">
+=======
+      
+      <div className="ourmission-main">
+>>>>>>> ec71c2128cec661d03808103f8dbe2ca82c96cb2
         <div className="ourmission">
           <h3>Our Mission</h3>
           <p>

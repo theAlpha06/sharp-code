@@ -1,26 +1,27 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux"
 import { toast } from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
-import { setSignupData } from "../../slices/authSlice";
-import { signUp } from "../../Services/Operations/apiAuth"
 import "./Forms.css";
-import axios from "axios";
+import { apiConnector } from "../../Services/apiConnectors";
+import { endpoints } from "../../Services/apis";
+
+const {
+  UPDATE_API,
+} = endpoints;
 
 export default function Update() {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({
     gender: "", // Initialize gender to an empty string
-    collageName: "",
+    collage: "",
     collageLocation: "",
     batch: "",
     mobileNo: "",
     branch: "",
   })
 
-  const { gender, collageName, collageLocation, batch, mobileNo, branch } = formData
+  const { gender, collage, collageLocation, batch, mobileNo, branch } = formData
 
   const handleOnChange = (e) => {
     setFormData((prevData) => ({
@@ -31,17 +32,20 @@ export default function Update() {
 
   const handleOnSubmit = async(e) => {
     e.preventDefault();
-    const signupData = { ...formData }
     try {
-      dispatch(setSignupData(signupData))
-      dispatch(signUp(gender, collageName, collageLocation, batch, mobileNo, branch, navigate))
+      const response=await apiConnector("POST",UPDATE_API,{
+        gender, collage, collageLocation, batch, mobileNo, branch });
+      if (response.status!==200) {
+        throw new Error(response)
+      }
+      toast.success("Data Updated Successfully")
+      navigate("/user/profile")
     } catch (err) {
-      toast.error("There is some error: ", err.response.data.message);
+      toast.error("There is some error: ", err);
     }
-    // Reset form fields after submission
     setFormData({
       gender: "",
-      collageName: "",
+      collage: "",
       collageLocation: "",
       batch: "",
       mobileNo: "",
@@ -82,9 +86,9 @@ export default function Update() {
         <div className="form-control">
           <input
             type="text"
-            name="collageName"
+            name="collage"
             placeholder="College Name"
-            value={collageName}
+            value={collage}
             onChange={handleOnChange}
             required
           />

@@ -1,6 +1,5 @@
 import React from "react"
 import { team } from "../../dummydata"
-// import { Link } from "react-router-dom"
 import './team.css'
 
 const TeamCard = () => {

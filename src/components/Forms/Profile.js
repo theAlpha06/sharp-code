@@ -45,17 +45,6 @@ export default function Profile() {
             }
         ))
 
-
-        // Reset
-        // setFormData({
-        //   firstName: "",
-        //   lastName: "",
-        //   email: "",
-        //   password: "",
-        //   confirmPassword: "",
-        //   domain: "",
-        // })
-
     }
 
     return (

@@ -1,10 +1,27 @@
 /*  */
+<<<<<<< HEAD
 .ourcourses {
   text-align: center;
   padding: 10vh 0 0 0;
   color: #3491B2;
   font-weight: 700;
 }
+=======
+  .ourcourses{
+    text-align: center;
+    padding: 10vh 0 0 0;
+    color: #3491B2;
+    font-weight: 700;
+  }
+  body {
+    background: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+>>>>>>> ec71c2128cec661d03808103f8dbe2ca82c96cb2
 
 body {
   background: #fff;
@@ -36,6 +53,7 @@ body {
   /* overflow: hidden; */
 }
 
+<<<<<<< HEAD
 .card {
   color: white;
   display: flex;
@@ -56,6 +74,27 @@ body {
   /* margin: 2rem; */
   color: black;
   position: relative;
+=======
+.card{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   overflow: hidden;
+    /* background:linear-gradient(to top left,white,#5090ccb0,white,#5090cc9a); */
+    /* background-color: #3491B2; */
+    background-color: white;
+    /* border-radius: 0 3rem ; */
+    margin: 1rem;
+    /* border: 1px solid rgba(53,100,100,255); */
+    box-shadow: 5px 5px 10px rgb(143, 134, 134);
+    min-height: 250px;
+    min-width: 250px;
+    max-width: 300px;
+   
+    /* margin: 2rem; */
+    color: black;
+>>>>>>> ec71c2128cec661d03808103f8dbe2ca82c96cb2
 }
 
 .card:hover {
@@ -102,6 +141,7 @@ body {
     color: #10b7d9;
 } */
 
+<<<<<<< HEAD
 .btn {
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
@@ -114,4 +154,17 @@ body {
   transition: all 1s;
   color: #3491B2;
   
+=======
+.btn{
+    padding: 0.6rem 1rem;
+    /* border: 1px solid #3491B2; */
+    border-radius: 0.5rem;
+    background-color: white;
+    bottom: 0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+    transition: all 1s;
+    color: #3491B2;
+>>>>>>> ec71c2128cec661d03808103f8dbe2ca82c96cb2
 }

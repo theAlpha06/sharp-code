@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const {auth}=require("../middlewares/auth")
 
 const { 
     findUser,
@@ -7,9 +8,8 @@ const {
     getUserSecurity
 } = require("../controllers/User");
 
-console.log("hii from userdetails");
-router.get("/userDetail",findUser);
-router.get("/deleteUser", deleteUser)
+router.get("/userDetail",auth,findUser);
+router.get("/deleteUser",auth, deleteUser)
 
 
 module.exports = router
