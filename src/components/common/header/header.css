@@ -3,10 +3,11 @@
   padding-left: 2rem;
   background-color: #fff;
   color: black;
+  
 }
 .logo h1 {
   font-family: "Audiowide", sans-serif;
-  font-size:2rem;
+  font-size:1.5rem;
   font-weight: 900;
 }
 .head .icon {
@@ -59,12 +60,14 @@ header ul li a {
   color: black;
   font-weight: 500;
   transition: 0.5s;
+  
 }
 header ul li a:hover {
   color: #3491B2;
 }
 .start a{
   color: white;
+ 
 }
 .start a:hover{
   color: #3491B2;
@@ -83,6 +86,7 @@ header ul li a:hover {
 
 .toggle {
   display: none;
+  
 }
 .button .buttonhero{
   color: white;
@@ -110,10 +114,14 @@ header ul li a:hover {
   header ul li {
     margin-bottom: 20px;
   }
+  header ul li a {
+    color: white;
+  }
   .toggle {
     display: block;
     background: none;
-    color: #fff;
+    color: black;
+    
     font-size: 30px;
     position: absolute;
     right: 0;
@@ -122,10 +130,12 @@ header ul li a:hover {
   }
   .mobile-nav {
     position: absolute;
-    top: 8.5vh;
+    top: 7.5vh;
     left: 0;
     width: 100%;
     background-color: #5090cc;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.938);
     transition: 0.3s ease
   }
   .start{
@@ -134,7 +144,12 @@ header ul li a:hover {
   .social{
     display: none;
   }
-  
+ 
+  .mobile_head{
+    display: flex;
+   align-items: center;
+   padding-right: 1rem;
+  }
 }
 @media screen and (max-width: 300px){
   .logo h1 {
