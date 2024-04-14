@@ -7,10 +7,12 @@ import img3 from "./thumbnail3.jfif";
 import img5 from "./thumbnail5.jfif";
 import img6 from './thumbnail6.jpg'
 
+
 export default function Slider2() {
     return (
         <div>
             <h1 className="ourcourses">OUR COURSES</h1>
+            
             <div className="cards__container">
 
             

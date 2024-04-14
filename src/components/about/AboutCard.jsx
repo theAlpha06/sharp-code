@@ -14,7 +14,7 @@ const AboutCard = () => {
 
   return (
     <>
-      <h1 className="aboutush1">About Us</h1>
+      <h1 className="aboutush1 ourcourses">ABOUT US</h1>
       <section className="aboutHome">
         <div className="container">
           <div className="left" data-aos="fade-right">

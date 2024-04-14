@@ -41,7 +41,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className='box link'>
-            <h3>About Our</h3>
+            <h3>About Us</h3>
             <ul>
               <Link to="/privacy"><li>Privacy and Policy</li></Link>
               <Link to="/termandcondition"><li>Term and conditions</li></Link>
