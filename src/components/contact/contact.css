@@ -64,6 +64,9 @@
 .contact-form {
   flex: 1;
 }
+.contact-form h3{
+  margin-bottom: 3rem;
+}
 
 .contact-form form {
   display: flex;
@@ -101,4 +104,14 @@
 
 .contact-form button:hover {
   background-color: #0056b3;
+}
+.contact-form .flexSB{
+  gap: 3rem;
+}
+
+@media screen and (max-width: 768px){
+  .contact-content{
+    align-items: center;
+  }
+  
 }

@@ -19,6 +19,9 @@
   font-size: 2rem;
   font-weight: 700;
 }
+.herobtn{
+  z-index: 11000;
+}
 
 
 .hero h3 {

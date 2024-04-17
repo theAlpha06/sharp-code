@@ -37,7 +37,7 @@ const Contact = () => {
             <div className="contact-details">
               <div className="contact-box">
                 <h4>EMAIL:</h4>
-                <p>info@yoursite.com</p>
+                <p>admin@sharpcode.in</p>
               </div>
             </div>
             <h3>Send your message</h3>

@@ -1,32 +1,19 @@
 import React from "react"
-<<<<<<< HEAD
-import "./header.css";
 
-=======
-import { Link } from "react-router-dom"
->>>>>>> ec71c2128cec661d03808103f8dbe2ca82c96cb2
 const Head = () => {
   return (
     <>
       <section className='head'>
-<<<<<<< HEAD
-        <div className=' flexSB mobile_head'>
-          <a href="/"> 
-          <img
-            style={{ height: "5rem" }}
-            src="./images/logo/bg5.png"
-=======
         <div className='container flexSB'>
-        <Link to="/"><img
-            style={{ height: "4rem" }}
+        <a href="/"><img
+            style={{ height: "5rem" }}
             src="./images/logo/logo.png"
->>>>>>> ec71c2128cec661d03808103f8dbe2ca82c96cb2
             alt="error"
-          /></Link>
+          /></a>
           <div className="logo">
-            <h1>SHARP-CODE</h1>
-            <span>ONLINE EDUCATION & LEARNING</span>
-          </div>
+              <h1>SHARP-CODE</h1>
+              <span>Think Sharp, Code Smart</span>
+            </div>
 
           <div className='social'>
             <i className='fab fa-facebook-f icon'></i>

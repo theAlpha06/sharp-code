@@ -16,10 +16,10 @@ const Footer = () => {
             <span>ONLINE EDUCATION & LEARNING</span>
             <p className="footp">Don't let your university, Become a hendrence in your learning</p>
 
-            <i className='fab fa-facebook-f icon'></i>
+            <a href="https://www.linkedin.com/company/sharpcode01/" target="_blank" className='fab fa-linkedin icon'></a>
             {/* <i className='fab fa-twitter icon'></i> */}
             <i className='fab fa-instagram icon'></i>
-            <i className='fab fa-linkedin icon'></i>
+            <i className='fab fa-facebook-f icon'></i>
           </div>
 
           <div className='box link'>

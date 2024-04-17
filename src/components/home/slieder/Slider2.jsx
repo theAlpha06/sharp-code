@@ -1,11 +1,5 @@
 import React from 'react'
 import './slider.css'
-import img1 from "./thumbnail4.jfif";
-
-import img3 from "./thumbnail3.jfif";
-
-import img5 from "./thumbnail5.jfif";
-import img6 from './thumbnail6.jpg'
 
 
 export default function Slider2() {
@@ -20,7 +14,7 @@ export default function Slider2() {
 
                     <div className="card ">
 
-                        <img className="card__img" src={img6} alt="img"/>
+                        <img className="card__img" src={process.env.PUBLIC_URL + '/images/logo/ourstory.jpg'} alt="img"/>
                             <div className="card__desc">
                                 <div className="card__title">
                                     Web Development
@@ -37,7 +31,7 @@ export default function Slider2() {
 
                     <div className="card ">
 
-                        <img className="card__img" src={img5} alt="img"/>
+                        <img className="card__img" src={process.env.PUBLIC_URL + '/images/logo/machine-learning.jpg'} alt="img"/>
                             <div className="card__desc">
                                 <div className="card__title">
                                     Machine Learning
@@ -54,7 +48,7 @@ export default function Slider2() {
 
                     <div className="card ">
 
-                        <img className="card__img" src={img3} alt="img"/>
+                        <img className="card__img" src={process.env.PUBLIC_URL + '/images/logo/data-science.jpg'} alt="img"/>
                             <div className="card__desc">
                                 <div className="card__title">
                                     Data Science
@@ -68,10 +62,12 @@ export default function Slider2() {
                             </div>
 
                     </div>
+                    <div className=' explore'>
+                        <a href="/team"><button>Explore More<i class="fa fa-arrow-right" aria-hidden="true"></i></button></a>
+                    </div>
+                    {/* <div className="card ">
 
-                    <div className="card ">
-
-                        <img className="card__img" src={img1} alt="img"/>
+                        <img className="card__img" src={process.env.PUBLIC_URL + '/images/logo/android.jpg'} alt="img"/>
                             <div className="card__desc">
                                 <div className="card__title">
                                     Android Development
@@ -87,20 +83,19 @@ export default function Slider2() {
                     </div>
                     <div className="card ">
 
-                        <img className="card__img" src={img1} alt="img"/>
+                        <img className="card__img" src={process.env.PUBLIC_URL + '/images/logo/data-analysis.jpg'} alt="img"/>
                             <div className="card__desc">
                                 <div className="card__title">
-                                    Android Development
+                                    Data Analysis
                                 </div>
                                 <div className="detail">
-                                Elevate your skills in Android development through our intensive 4-week internship, blending theory with practical application to create cutting-edge mobile applications.
-                                </div>
+                                Data analysis involves extracting insights from raw data to make informed decisions. It includes cleaning, transforming, and interpreting data to uncover patterns, trends, and valuable information for business strategies.</div>
                                 <div className="buttons">
                                     <a href="/register"><button className='btn'>Apply</button></a>
                                 </div>
                             </div>
 
-                    </div>
+                    </div> */}
 
                 </div>
 
