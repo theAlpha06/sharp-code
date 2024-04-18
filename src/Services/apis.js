@@ -1,5 +1,5 @@
 
-const BASE_URL=''
+
 
 // AUTH ENDPOINTS
 export const endpoints = {
