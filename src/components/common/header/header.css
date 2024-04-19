@@ -164,8 +164,11 @@ header ul li a:hover {
    padding-right: 1rem;
   }
   .logo h1 {
-    font-size:1rem;
+    font-size:1.7rem;
     /* font-weight: 900; */
+  }
+  .logo p{
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 300px){
