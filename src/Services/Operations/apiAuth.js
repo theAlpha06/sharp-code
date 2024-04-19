@@ -85,6 +85,7 @@ export function submission(
       // console.log("SUBMISSION API RESPONSE............", response)
 
       if (!response.success) {
+        toast.error('Login Unsuccessful')
         throw new Error(response.message)
       }
       toast.success("Submission Successful")
