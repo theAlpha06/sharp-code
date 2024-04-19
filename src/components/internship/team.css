@@ -8,6 +8,7 @@
   height: 30vh;
 }
 
+
 .items{
   display: flex;
   flex-direction: column;
@@ -107,6 +108,40 @@
 }
 .flip-box{
   position: relative;
+}
+
+@media screen and (max-width: 450px) {
+  .team .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Align items at the center */
+    text-align: center; /* Center text content */
+    width: 80vw; /* Adjust width */
+    margin: auto; /* Center horizontally */
+  }
+
+  .team .details {
+    padding: 20px; /* Adjust padding */
+    height: auto; /* Allow height to adjust dynamically */
+  }
+
+  .team .img img {
+    height: auto; /* Allow image height to adjust dynamically */
+    max-width: 100%; /* Ensure image does not overflow container */
+  }
+
+  .price {
+    position: static; /* Remove absolute positioning */
+    margin-top: 10px; /* Adjust margin */
+    font-size: 1.2rem; /* Adjust font size */
+    text-align: center; /* Center price */
+  }
+
+  .overlay {
+    bottom: auto; /* Remove absolute positioning */
+    padding: 10px; /* Adjust padding */
+  }
 }
 
 
