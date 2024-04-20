@@ -15,6 +15,7 @@ export const apiConnector = async (method, url, data = null) => {
     console.log("hii from apiconnector 2 :" ,response.data);
     return response;
   } catch (error) {
-    toast.error(error.message);
+    throw(error);
+    // toast.error(error.message);
   }
 };
