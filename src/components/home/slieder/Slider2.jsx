@@ -63,7 +63,7 @@ export default function Slider2() {
 
                     </div>
                     <div className=' explore'>
-                        <a href="/team"><button>Explore More<i class="fa fa-arrow-right" aria-hidden="true"></i></button></a>
+                        <a href="/team"><button>Explore More<i className="fa fa-arrow-right" aria-hidden="true"></i></button></a>
                     </div>
                     {/* <div className="card ">
 

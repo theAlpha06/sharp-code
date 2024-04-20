@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import { toast } from "react-hot-toast"
-import { useNavigate } from "react-router-dom"
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import "./Forms.css";
 import { apiConnector } from "../../Services/apiConnectors";
 import { endpoints } from "../../Services/apis";
 
-const {
-  SUBMISSION_API
-} = endpoints;
+const { SUBMISSION_API } = endpoints;
 
 export default function Submission() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     LinkedIn_Profile_Link: "",
     GitHub_Profile_Link: "",
     Task1_GitHub_Link: "",
@@ -21,55 +19,29 @@ export default function Submission() {
     Task1_LinkedIn_Link: "",
     Task2_LinkedIn_Link: "",
     Task3_LinkedIn_Link: "",
-   
-  })
+  };
 
-
-
-  const { LinkedIn_Profile_Link, GitHub_Profile_Link, Task1_GitHub_Link,Task2_GitHub_Link,Task3_GitHub_Link,Task3_LinkedIn_Link,Task2_LinkedIn_Link,Task1_LinkedIn_Link } = formData
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleOnChange = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [e.target.name]: e.target.value,
-    }))
-  }
-
-  const handleOnSubmit = async(e) => {
-    e.preventDefault()
-    const signupData = {
-      ...formData,
-    }
-    try{
-      const response = await apiConnector("POST", SUBMISSION_API, {
-      LinkedIn_Profile_Link,
-      GitHub_Profile_Link,
-      Task1_GitHub_Link,
-      Task2_GitHub_Link,
-      Task3_GitHub_Link,
-      Task1_LinkedIn_Link,
-      Task2_LinkedIn_Link,
-      Task3_LinkedIn_Link,
-        
-      });
-      navigate('/user/profile');
-    }
-    catch(err){
-      toast.error("there is some error bhai>>",err.response.data.message);
-    }
-
     setFormData({
-      LinkedIn_Profile_Link: "",
-      GitHub_Profile_Link: "",
-      Task1_GitHub_Link: "",
-      Task2_GitHub_Link: "",
-      Task3_GitHub_Link: "",
-      Task1_LinkedIn_Link: "",
-      Task2_LinkedIn_Link: "",
-      Task3_LinkedIn_Link: "",
-    })
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  }
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      console.log("from submission : ",formData);
+      await apiConnector("POST", SUBMISSION_API, formData);
+      toast.success("Submission successful");
+      navigate('/user/profile'); // Redirect to user profile after successful submission
+      setFormData(initialFormData); // Reset form data
+    } catch (err) {
+      toast.error("Error submitting data: " + err.message);
+    }
+  };
 
   return (
     <div className="login">
@@ -82,7 +54,7 @@ export default function Submission() {
             type="text"
             name="LinkedIn_Profile_Link"
             placeholder="LinkedIn Profile Link"
-            value={LinkedIn_Profile_Link}
+            value={formData.LinkedIn_Profile_Link}
             onChange={handleOnChange}
             required
           />
@@ -94,7 +66,7 @@ export default function Submission() {
             type="text"
             name="GitHub_Profile_Link"
             placeholder="GitHub Profile Link"
-            value={GitHub_Profile_Link}
+            value={formData.GitHub_Profile_Link}
             onChange={handleOnChange}
             required
           />
@@ -106,7 +78,7 @@ export default function Submission() {
             type="text"
             name="Task1_GitHub_Link"
             placeholder="Task1 GitHub Link"
-            value={Task1_GitHub_Link}
+            value={formData.Task1_GitHub_Link}
             onChange={handleOnChange}
             required
           />
@@ -119,7 +91,7 @@ export default function Submission() {
             type="text"
             name="Task1_LinkedIn_Link"
             placeholder="Task1 LinkedIn Link"
-            value={Task1_LinkedIn_Link}
+            value={formData.Task1_LinkedIn_Link}
             onChange={handleOnChange}
             required
           />
@@ -130,7 +102,7 @@ export default function Submission() {
             type="text"
             name="Task2_GitHub_Link"
             placeholder="Task2 GitHub Link"
-            value={Task2_GitHub_Link}
+            value={formData.Task2_GitHub_Link}
             onChange={handleOnChange}
             required
           />
@@ -143,7 +115,7 @@ export default function Submission() {
             type="text"
             name="Task2_LinkedIn_Link"
             placeholder="Task2 LinkedIn Link"
-            value={Task2_LinkedIn_Link}
+            value={formData.Task2_LinkedIn_Link}
             onChange={handleOnChange}
             required
           />
@@ -154,7 +126,7 @@ export default function Submission() {
             type="text"
             name="Task3_GitHub_Link"
             placeholder="Task3 GitHub Link"
-            value={Task3_GitHub_Link}
+            value={formData.Task3_GitHub_Link}
             onChange={handleOnChange}
             required
           />
@@ -167,7 +139,7 @@ export default function Submission() {
             type="text"
             name="Task3_LinkedIn_Link"
             placeholder="Task3 LinkedIn Link"
-            value={Task3_LinkedIn_Link}
+            value={formData.Task3_LinkedIn_Link}
             onChange={handleOnChange}
             required
           />

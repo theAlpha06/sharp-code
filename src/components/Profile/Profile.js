@@ -32,11 +32,11 @@ export default function Profile() {
         </div>
       <div className="profile-heading">
         <h1 className="profile-title">My Profile</h1>
-        <img
+        {/* <img
           className="profile-image"
-          src="/public/logo192.png"
+          src="/public/logo.png"
           alt="Profile Image"
-        />
+        /> */}
       </div>
       <hr/>
       <div className="profile-section">

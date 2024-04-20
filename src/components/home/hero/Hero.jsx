@@ -18,8 +18,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      {/* <div className='margin'></div> */}
-      {/* <AboutCard/> */}
 
       <div className="area">
         <ul className="circles">
