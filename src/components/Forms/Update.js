@@ -36,13 +36,12 @@ export default function Update() {
       const response=await apiConnector("POST",UPDATE_API,{
         gender, collage, collageLocation, batch, mobileNo, branch });
       if (response.status!==200) {
-        toast.error(response.massage);
+        throw new Error(response)
       }
-      console.log(response);
       toast.success("Data Updated Successfully")
       navigate("/user/profile")
     } catch (err) {
-      toast.massage(err.massage);
+      toast.error("There is some error: ", err);
     }
     setFormData({
       gender: "",

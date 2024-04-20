@@ -4,7 +4,7 @@ axios.defaults.withCredentials = true;
 
 export const apiConnector = async (method, url, data = null) => {
   try {
-    // console.log("hii from apiconnector",data);
+    console.log("hii from apiconnector",data);
     const response = await axios({
       method: method,
       url: url,
