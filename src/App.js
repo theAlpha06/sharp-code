@@ -15,6 +15,7 @@ import Update from "./components/Forms/Update"
 import TermandCondition from "./components/common/termandcondition"
 import Privacy from "./components/common/privacy"
 import AboutCardHome from "./components/about/aboutcardhome"
+import CodeOfConduct from "./components/common/codeofcoduct"
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/update" element={<Update />} />
           <Route path="/termandcondition" element={<TermandCondition />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/codeofconduct" element={<CodeOfConduct />} />
         </Routes>
         <Footer/>
       </Router>

@@ -99,6 +99,7 @@
 }
 
 
+
 @media screen and (max-width: 450px){
   .shadow{
     align-items: center;
@@ -120,7 +121,12 @@
     width: 80vw; /* Adjust width */
     margin: auto; /* Center horizontally */
   }
-
+  
+  
+  .faq-image-container{
+    display: flex;
+    flex-direction: column;
+  }
   .team .details {
     padding: 20px; /* Adjust padding */
     height: auto; /* Allow height to adjust dynamically */

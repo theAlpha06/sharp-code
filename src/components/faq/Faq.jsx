@@ -24,7 +24,7 @@ const Faq = () => {
               className="faq-image"
             />
           </div>
-            <div className="container">
+            <div className="container contentfaq">
               {faq.map((val, index) => (
                 <div className="faq-item" key={index}>
                   <button

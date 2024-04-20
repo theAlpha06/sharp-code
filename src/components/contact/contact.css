@@ -109,7 +109,15 @@
   gap: 3rem;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
+  .contacts .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .map-container iframe{
+    width: 80vw;
+    height: 30vh;
+  }
   .contact-content{
     align-items: center;
   }

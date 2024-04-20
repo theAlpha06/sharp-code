@@ -146,5 +146,8 @@ footer .last i {
   .news_container {
     flex-direction: column;
   }
+  .box{
+    margin: 1rem 0;
+  }
 }
 

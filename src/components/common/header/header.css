@@ -143,7 +143,7 @@ header ul li a:hover {
   }
   .mobile-nav {
     position: absolute;
-    top: 7.5vh;
+    top: 6vh;
     left: 0;
     width: 100%;
     background-color: #5090cc;
@@ -164,11 +164,15 @@ header ul li a:hover {
    padding-right: 1rem;
   }
   .logo h1 {
-    font-size:1.7rem;
+    font-size:1.5rem;
     /* font-weight: 900; */
   }
-  .logo p{
-    font-size: 0.8rem;
+  .head {
+    margin: 0;
+    padding: 0;
+  }
+  .logo span{
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 300px){

@@ -14,40 +14,39 @@ const Footer = () => {
           <div className='box logo'>
             <h1>SHARP-CODE</h1>
             <span>ONLINE EDUCATION & LEARNING</span>
-            <p className="footp">Don't let your university, Become a hendrence in your learning</p>
+            <p className="footp">Don't let your university, Become a barrier in your learning</p>
 
             <a href="https://www.linkedin.com/company/sharpcode01/" target="_blank" className='fab fa-linkedin icon'></a>
-            {/* <i className='fab fa-twitter icon'></i> */}
-            <i className='fab fa-instagram icon'></i>
-            <i className='fab fa-facebook-f icon'></i>
+            <a href="https://www.instagram.com/sharp.code?igsh=cHVoeWFrOXFsbTl5" target="_blank" className='fab fa-instagram icon'></a>
+            {/* <a className='fas fa-times-circle icon'></a> */}
           </div>
 
           <div className='box link'>
             <h3>Explore</h3>
             <ul>
-              <Link to="/about"><li>About Us</li></Link>
-              <Link to="/team"><li>Internship</li></Link>
-              <Link to="/faq"><li>FAQ</li></Link>
-              <Link to="/contact"><li> <i className="fa fa-phone-square"></i> Contact Us</li></Link>
+              <a href="/about"><li>About Us</li></a>
+              <a href="/team"><li>Internship</li></a>
+              <a href="/faq"><li>FAQ</li></a>
+              <a href="/contact"><li> <i className="fa fa-phone-square"></i> Contact Us</li></a>
               <li><i className='fa fa-envelope'></i>  abc@gmail.com</li>
             </ul>
           </div>
           <div className='box link'>
             <h3>Quick Links</h3>
             <ul>
-              <Link to="/register"><li>Registration</li></Link>
-              <Link to="/login"><li>Login</li></Link>
-              <Link to="/update"><li>Update Details</li></Link>
-              <Link to="/submission"><li>Task Submission</li></Link>
+              <a href="/register"><li>Registration</li></a>
+              <a href="/login"><li>Login</li></a>
+              <a href="/update"><li>Update Details</li></a>
+              <a href="/submission"><li>Task Submission</li></a>
 
             </ul>
           </div>
           <div className='box link'>
             <h3>About Us</h3>
             <ul>
-              <Link to="/privacy"><li>Privacy and Policy</li></Link>
-              <Link to="/termandcondition"><li>Term and conditions</li></Link>
-              <Link to="/codeofconduct"><li>Code of Conduct</li></Link>
+              <a href="/privacy"><li>Privacy and Policy</li></a>
+              <a href="/termandcondition"><li>Term and conditions</li></a>
+              <a href="/codeofconduct"><li>Code of Conduct</li></a>
 
             </ul>
           </div>

@@ -1,8 +1,8 @@
 .login{
     background-image: url(/public/images/bg8.png);
     background-position: center;
-    background-repeat: repeat-y;
-    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 2rem 0;
 }
 .login__container{
@@ -14,7 +14,7 @@
     text-align: center;
     margin: 1rem;
     padding-bottom: 4rem;
-    width: 25%;
+    width: 30vw;
     margin: auto;
     position: relative;
     background-color: white;
@@ -70,10 +70,9 @@ textarea:focus, input:focus{
     outline: none;
 }
 .title{
-    border-radius: 0 50%;
     background-color: #5090cc;
     color: white;
-    padding: 1rem 2rem 2rem ;
+    padding: 1rem 2rem  ;
 
 }
 
@@ -114,5 +113,10 @@ textarea:focus, input:focus{
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+  }
+  @media screen and (max-width: 1100px){
+    .login__container{
+        width: 60%;
+    }
   }
   
