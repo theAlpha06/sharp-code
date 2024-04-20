@@ -38,6 +38,7 @@ export default function Update() {
       if (response.status!==200) {
         throw new Error(response)
       }
+      console.log(response);
       toast.success("Data Updated Successfully")
       navigate("/user/profile")
     } catch (err) {
