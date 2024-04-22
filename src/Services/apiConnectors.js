@@ -7,6 +7,7 @@ export const apiConnector = async (method, url, data = null) => {
     console.log("hii from apiconnector",data);
     const response = await axios({
       method: method,
+      baseURL: 'https://server-qcrx.onrender.com/',
       url: url,
       data: data,
     },{
