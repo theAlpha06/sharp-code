@@ -1,0 +1,139 @@
+/* SubmissionForm.css */
+
+.submission-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0;
+  }
+  
+  .submission-login__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .submission-course-details {
+    width: 50%;
+    height: 80vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Position relative for pseudo-element */
+  }
+  
+  .submission-course-details::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px; /* Adjust as needed */
+    width: 2px; /* Width of the vertical line */
+    background-color: #ccc; /* Color of the vertical line */
+  }
+  
+  .submission-course-details h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .submission-course-details h1 {
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    margin-top: 45%;
+  }
+  
+  .submission-course-details p {
+    margin: 1.6vw 0;
+    font-size: 16px;
+  }
+
+  .submission-course-details p span{
+    color: rgb(0, 255, 98);
+    font-size: 1rem;
+  }
+  
+  .submission-signup-form {
+    width: 50%;
+    height: 80vh;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submission-title {
+    margin-bottom: 10vh;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .submission-form__box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .submission-form-control {
+    margin:0.5rem;
+    text-align: center;
+  }
+  
+  .submission-form-control input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .submission-primary-btn {
+    color: #fff;
+    background-color:#3491B2;
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submission-primary-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .submission-createnewact {
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .submission-createnewact:hover {
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 800px){
+    .submission-login{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+    .submission-login__container{
+        display: flex;
+        flex-direction: column;
+    }
+    .submission-course-details{
+        width: 80vw;
+        height: auto;
+        margin: 5vh 0;
+    }
+    .submission-signup-form{
+        margin: 5vh 0;
+        width: 80vw;
+        height: auto;
+    }
+    
+  }
+  

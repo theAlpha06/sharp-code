@@ -16,7 +16,7 @@ import TermandCondition from "./components/common/termandcondition"
 import Privacy from "./components/common/privacy"
 import AboutCardHome from "./components/about/aboutcardhome"
 import CodeOfConduct from "./components/common/codeofcoduct"
-
+import SubmissionForm from "./components/Forms/registration"
 function App() {
   return (
     <div className="router__container">
@@ -30,6 +30,7 @@ function App() {
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register' element={<SignUp />} />
           <Route exact path='/contact' element={<Contact />} />
+          <Route exact path="/registration" element={<SubmissionForm />} />
           <Route path="/user/profile" element={<Profile />} />
           <Route path="/submission" element={<Submission />} />
           <Route path="/update" element={<Update />} />

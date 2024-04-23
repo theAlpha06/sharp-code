@@ -10,8 +10,7 @@ export default function AboutCardHome() {
         <div className="ourmission">
           <h3>Our Mission</h3>
           <p>
-            Enable Students from any background, the ability to upskill in latest technologies and land in amazing careers.
-            MSME registered startup, we give every student from any diverse starting point to learn latest technology at their own pace and with practical implementation. Thus, creating a powerful online learning ecosystem for everyone and enable the youth to upskill themselves.
+Sharpcode, an MSME and ISO registered startup, is dedicated to empowering students of all backgrounds with the latest technologies for successful careers. Our mission is to enable every individual to upskill at their own pace, creating a robust online learning ecosystem. Inclusivity is key at Sharpcode as we offer practical learning experiences that prepare our students for the job market. With industry experts guiding the way, flexible learning schedules, and a vibrant community, we provide the platform for you to unlock your potential in technology
           </p>
         </div>
       </div>
@@ -32,9 +31,7 @@ export default function AboutCardHome() {
         <div className="about-item-right">
           <h3>Our story</h3>
           <p>
-            We realized that there are so many students who are disconnected with practical skills in computer science and hence are not able to get internships and work on live projects and lacked good resume and linkedin profiles.
-            Hence as a whole suffers in placements.
-            From here, SHARPCODE was born.
+SHARPCODE was born from a realization: countless students lacked practical skills in computer science, hindering their ability to secure internships, work on live projects, and craft compelling resumes and LinkedIn profiles. This gap led to challenges in securing placements, affecting the student community as a whole. With this insight, SHARPCODE emerged as a solution, aiming to bridge this crucial gap and empower students with the practical skills needed to excel in the industry.
           </p>
         </div>
       </div>
@@ -47,7 +44,7 @@ export default function AboutCardHome() {
         <div className="about-item-right">
           <h3>Students First</h3>
           <p>
-            We know that not every student have proper guide for learning. And some students have crazy schedules, extra-curricular and even caring for their loved ones while studying. So, we built the self paced learning internship and after that also eligible to work on live projects.
+At SHARPCODE, we understand that not every student has access to a structured learning guide. Many students juggle demanding schedules, participate in extracurricular activities, and even shoulder responsibilities for loved ones while pursuing their studies. Recognizing these challenges, we developed a self-paced learning internship program. This unique approach allows students to learn at their own pace, gaining valuable skills along the way. Upon completion, students are not only equipped with essential knowledge but are also eligible to work on live projects, preparing them for real-world challenges in their chosen field.
           </p>
         </div>
       </div>

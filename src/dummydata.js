@@ -36,42 +36,42 @@ export const team = [
   {
     cover: "./images/logo/front-end.jpg",
     name: "Frontend-development",
-    work: "Immerse yourself in our transformative 4-week program, mastering HTML, CSS, and JavaScript. Gain proficiency in creating visually stunning and responsive user interfaces, setting the foundation for dynamic web experiences.",
+    details: "Immerse yourself in our transformative 4-week program, mastering HTML, CSS, and JavaScript. Gain proficiency in creating visually stunning and responsive user interfaces, setting the foundation for dynamic web experiences.",
   },
   {
     cover: "./images/logo/data-analysis.jpg",
     name: "Data-analysis",
-    work: "In our focused 4-week internship, students navigate statistical methods and utilize visualization tools to derive insights from data sets. This program equips them to make informed decisions and navigate the complexities of data analysis.",
+    details: "In our focused 4-week internship, students navigate statistical methods and utilize visualization tools to derive insights from data sets. This program equips them to make informed decisions and navigate the complexities of data analysis.",
   },
   {
     cover: "./images/logo/machine-learning.jpg",
     name: "Machine-learning",
-    work: "Attain expertise in Machine Learning through our comprehensive 4-week internship, unlocking exciting career prospects. Lay a robust foundation with hands-on experience in web application development and deployment in a nurturing environment.",
+    details: "Attain expertise in Machine Learning through our comprehensive 4-week internship, unlocking exciting career prospects. Lay a robust foundation with hands-on experience in web application development and deployment in a nurturing environment.",
   },
   {
     cover: "./images/logo/stuani.jpg",
     name: "Fullstack-development",
-    work: "Conquer the intricacies of full stack development in our dynamic 4-week internship. Students seamlessly integrate frontend and backend skills, ensuring a comprehensive understanding of creating responsive, feature-rich web applications.",
+    details: "Conquer the intricacies of full stack development in our dynamic 4-week internship. Students seamlessly integrate frontend and backend skills, ensuring a comprehensive understanding of creating responsive, feature-rich web applications.",
   },
   {
     cover: "./images/logo/android.jpg",
     name: "Android-development",
-    work: "Dive into Android app development at SHARPCODE, offering a straightforward approach to building your first app. Explore the vast potential of mobile innovation and kickstart your journey towards app development success.",
+    details: "Dive into Android app development at SHARPCODE, offering a straightforward approach to building your first app. Explore the vast potential of mobile innovation and kickstart your journey towards app development success.",
   },
   {
     cover: "./images/logo/back-end.jpg",
     name: "Backend-development",
-    work: "Unleash your potential in our comprehensive 4-week Backend Development internship. Navigate server-side technologies and database management, acquiring skills to build robust, scalable web applications that meet industry standards.",
+    details: "Unleash your potential in our comprehensive 4-week Backend Development internship. Navigate server-side technologies and database management, acquiring skills to build robust, scalable web applications that meet industry standards.",
   },
   {
     cover: "./images/logo/pyth.jpg",
     name: "Python-development",
-    work: "Enroll in our extensive 4-week internship, delving into Python programming essentials from home. Acquire expertise in web development and deploying Python web apps, earning certification and elevating your professional trajectory.",
+    details: "Enroll in our extensive 4-week internship, delving into Python programming essentials from home. Acquire expertise in web development and deploying Python web apps, earning certification and elevating your professional trajectory.",
   },
   {
     cover: "./images/logo/data-science.jpg",
     name: "Data-science",
-    work: "Immerse yourself in distinctive remote data science internships, gaining invaluable experience within the virtual workforce. Explore highly sought-after niches, including competitive and favored data analysis opportunities.",
+    details: "Immerse yourself in distinctive remote data science internships, gaining invaluable experience within the virtual workforce. Explore highly sought-after niches, including competitive and favored data analysis opportunities.",
   },
 ]
 

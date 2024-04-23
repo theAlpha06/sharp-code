@@ -1,6 +1,6 @@
 .login{
     background-image: url(/public/images/bg8.png);
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     padding: 2rem 0;

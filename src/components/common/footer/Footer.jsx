@@ -24,7 +24,7 @@ const Footer = () => {
           <div className='box link'>
             <h3>Explore</h3>
             <ul>
-              <a href="/about"><li>About Us</li></a>
+              <a href="/abouthome"><li>About Us</li></a>
               <a href="/team"><li>Internship</li></a>
               <a href="/faq"><li>FAQ</li></a>
               <a href="/contact"><li> <i className="fa fa-phone-square"></i> Contact Us</li></a>
